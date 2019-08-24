@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/8 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="操作系统内存管理​    计算机分层存储器体系(memory hierarchy)：计算机有若干兆快速、昂贵的高速缓存(cache)、数千兆（G）速度与价格适中的同样易失性的内存、以及几TB的低速、廉价、非易失性的磁盘存储。 ​    最底层的高速缓存由硬件来直接管理。 无存储器抽象的缺点​    最简单的存储器抽象就是没有抽象。每个程序直接访问物理内存，指令如下： 1MOV REGISTER1,">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/08/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/08/24/操作系统/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="操作系统内存管理​    计算机分层存储器体系(memory hierarchy)：计算机有若干兆快速、昂贵的高速缓存(cache)、数千兆（G）速度与价格适中的同样易失性的内存、以及几TB的低速、廉价、非易失性的磁盘存储。 ​    最底层的高速缓存由硬件来直接管理。 无存储器抽象的缺点​    最简单的存储器抽象就是没有抽象。每个程序直接访问物理内存，指令如下： 1MOV REGISTER1,">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-06-12T14:01:49.204Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="操作系统内存管理​    计算机分层存储器体系(memory hierarchy)：计算机有若干兆快速、昂贵的高速缓存(cache)、数千兆（G）速度与价格适中的同样易失性的内存、以及几TB的低速、廉价、非易失性的磁盘存储。 ​    最底层的高速缓存由硬件来直接管理。 无存储器抽象的缺点​    最简单的存储器抽象就是没有抽象。每个程序直接访问物理内存，指令如下： 1MOV REGISTER1,">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,202 +154,197 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-操作系统" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h3 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h3><p>​    计算机分层存储器体系(memory hierarchy)：计算机有若干兆快速、昂贵的高速缓存(cache)、数千兆（G）速度与价格适中的同样易失性的内存、以及几TB的低速、廉价、非易失性的磁盘存储。</p>
+<p>​    最底层的高速缓存由硬件来直接管理。</p>
+<h5 id="无存储器抽象的缺点"><a href="#无存储器抽象的缺点" class="headerlink" title="无存储器抽象的缺点"></a>无存储器抽象的缺点</h5><p>​    最简单的存储器抽象就是没有抽象。每个程序直接访问物理内存，指令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MOV REGISTER1, 1000</span><br></pre></td></tr></table></figure>
+
+<p>​    计算机会直接将位置1000的物理内存上的内容直接移到REGISTER1上。呈现给编程人员的存储器模型就是简单的物理内存。在这种情况下，<strong>想要在内存中同时运行两个程序是不可能的</strong>。 </p>
+<h5 id="存储器抽象：-地址空间"><a href="#存储器抽象：-地址空间" class="headerlink" title="存储器抽象： 地址空间"></a>存储器抽象： 地址空间</h5><p>​    想要使得多个应用程序同时处于内存中不受影响，需要解决两个问题：<strong>保护和重定向</strong>。地址空间就像进程中创建了一类抽象的CPU用以运行程序一样，地址空间为程序创造了一种抽象的内存。地址空间是一个进程用于寻址内存的一套地址集合。每个进程都有自己的地址空间，并且这个地址空间独立于其他的地址空间。</p>
+<p>​    比较难的是给每个程序一个自己独有的地址空间，使得一个程序中的地址28与另一个程序中的地址28物理地址不同。所解决的办法就是采用<strong>动态重定位</strong>。动态重定位就是把每个程序的地址空间映射到物理地址的不同部分。所实现的方法就是在每个CPU中配置了两个特殊硬件寄存器，通常叫做<strong>基址寄存器</strong>和<strong>界限寄存器</strong>。当一个程序运行时，程序的初始物理地址装载到基址寄存器中，程序的长度装载到界限寄存器中。</p>
+<p>​    每次一个进程访问内存，取一条指令，读或写一个数据字，CPU硬件会把地址发送到内存总线之前，自动把基址值加到进程发出的地址值上。如果访问的地址超过了界限，会产生错误并终止访问。</p>
+<p>​    使用基址寄存器和界限寄存器是给每个进程提供地址空间非常容易的方法，因为每个内存地址在送到内存之前，都会自动加上基址寄存器的内容。</p>
+<p>​    使用基址寄存器和界限寄存器重定向的缺点是：每次访问内存都需要进行加法和比较运算。</p>
+<h4 id="交换技术"><a href="#交换技术" class="headerlink" title="交换技术"></a>交换技术</h4><p>​    交换技术：把一个进程完整调入内存，使该进程运行一段时间，然后将它存回磁盘。空闲进程主要存储在磁盘上，所以当他们不运行时就不会占用内存。</p>
+<p>​    交换在内存中产生了多个空闲区，通过把所有的进程尽可能向下移动，有可能将这些小的空闲区合并成一大块。这个技术称为<strong>内存紧缩</strong>。通常不会进行这个操作，因为会耗费大量的CPU时间。例如，有一台16GB内存的计算机每8ns复制8个字节，那么它紧缩全部，需要花费16s的时间。</p>
+<p>​    许多程序设计语言都允许从堆中动态分配内存，那么当进程空间试图增长时，就会出现问题。为了减少因为内存不够而引起的进程交换和移动所产生的开销，一种可用的方法是：当<strong>换入或移动进程时为它分配一些额外的内存</strong>。</p>
+<p>​    在动态分配内存时，操作系统必须对其进行管理。一般而言，有两种方法可以跟踪内存使用情况：<strong>位图</strong>和<strong>空闲区链表</strong>。</p>
+<p>​    空闲链表存储管理：最佳适配法、首次适应法、最差适配法、快速适配法</p>
+<p>​    </p>
+<h4 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h4><p>​    虚拟内存使得程序在只有一部分被调入内存的情况下运行。虚拟内存的基本思想是：每个程序拥有自己的地址空间，这个空间被分割诚多个块，每一块被称为页或者页面，每一页拥有连续的地址范围。这些页被映射到物理内存，但是并不是所有的页面都必须在内存中才能运行程序。从某个角度来看，虚拟内存是对基址寄存器和界限寄存器的综合。</p>
+<p>​    由程序产生的地址被称为虚拟地址。它们构成了一个虚拟地址空间（virtual address space）。在没有虚拟内存的计算机上，系统直接将虚拟地址送到内存总线上，读写操作使用具有同样的地址的物理内存字；而在使用虚拟内存的情况下，虚拟地址不是被直接送到地址总线上，而是被送到内存管理单元（Memory Management Unit）上，MMU将虚拟地址直接映射为物理地址。</p>
+<p>​    页表：页表的目的是把虚拟页面映射成页框。从数学角度看，页表是一个函数，它的参数是虚拟页号，结果是物理页框号。</p>
+<p>​    页面置换算法：FIFO、最近最少使用、最近未使用、时钟页面置换算法、最优算法</p>
+<h5 id="分段：分页的虚拟内存都是一维的，虚拟地址从0到最大地址，一个地址接着另外一个地址。对许多问题来说，有两个或者多个独立的地址空间可能会比只有一个好得多。一个直观并且通用的方法是在机器上提供多个互相独立的称为段（segment）。每个段由一个或者多个最大的线性地址序列构成。段的长度在运行期间可以动态改变，比如，堆栈长度在数据压入时会增长，在数据弹出时又会被减小。"><a href="#分段：分页的虚拟内存都是一维的，虚拟地址从0到最大地址，一个地址接着另外一个地址。对许多问题来说，有两个或者多个独立的地址空间可能会比只有一个好得多。一个直观并且通用的方法是在机器上提供多个互相独立的称为段（segment）。每个段由一个或者多个最大的线性地址序列构成。段的长度在运行期间可以动态改变，比如，堆栈长度在数据压入时会增长，在数据弹出时又会被减小。" class="headerlink" title="分段：分页的虚拟内存都是一维的，虚拟地址从0到最大地址，一个地址接着另外一个地址。对许多问题来说，有两个或者多个独立的地址空间可能会比只有一个好得多。一个直观并且通用的方法是在机器上提供多个互相独立的称为段（segment）。每个段由一个或者多个最大的线性地址序列构成。段的长度在运行期间可以动态改变，比如，堆栈长度在数据压入时会增长，在数据弹出时又会被减小。"></a>分段：分页的虚拟内存都是一维的，虚拟地址从0到最大地址，一个地址接着另外一个地址。对许多问题来说，有两个或者多个独立的地址空间可能会比只有一个好得多。一个直观并且通用的方法是在机器上提供多个互相独立的称为<strong>段</strong>（segment）。每个段由一个或者多个最大的线性地址序列构成。段的长度在运行期间可以动态改变，比如，堆栈长度在数据压入时会增长，在数据弹出时又会被减小。</h5><p>​    要在分段或者二维的存储器中指示一个地址，程序必须提供两个部分地址：一个段号和一个段内地址。<strong>段是一个逻辑实体，程序员知道这点并且把它作为一个逻辑实体来使用</strong>。</p>
+<p>​    <strong>分段有助于几个进程之间共享过程和数据</strong>。例如，在分段系统中，可以把图像库放到一个单独的段中由各个进程共享，从而不再需要在每个进程的地址空间中都保存一份。</p>
+<h3 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h3><p>​    就像操作系统提取处理器的概念来建立进程的抽象，以及提取物理存储器的概念来建立进程地址空间的抽象那样，我们可以用一个新的抽象-文件，来解决一些存储的问题。</p>
+<p>​    文件时进程创建的信息逻辑单元。一个磁盘通常包含几千个甚至几百万个文件，每个文件时独立于其他文件的，唯一不同的是文件对磁盘的建模，而非对RAM的建模。事实上，如果能把每个文件看成一个地址空间，那么就能理解文件的本质了。</p>
+<p>​    </p>
+<h5 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h5><p>​    文件可以有多种构造方式，包括字节序列、记录序列、树。事实上操作系统并不关心文件内容是什么，操作系统所见到的就是字节，其文件内容的任何含义只在用户程序中解释。Unix和Windows都采用这种方法。</p>
+<p>​    <strong>.</strong>指向当前目录，<strong>..</strong>指向上一级目录。</p>
+<h5 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h5><p>​    包括普通文件和目录，unix还有字符特殊文件和块特殊文件。<strong>普通文件包括ASCII文件和二进制文件</strong>。文件系统通常提供目录或者文件夹用于记录文件的位置，在很多系统中，目录本身也是文件。目录包括以及目录系统和层次文件系统。</p>
+<h5 id="文件访问"><a href="#文件访问" class="headerlink" title="文件访问"></a>文件访问</h5><ul>
+<li>顺序访问。进程从系统中可以从头开始按照顺序读取文件的全部字节和记录，但不能跳过某一些内容，也不能不按顺序读取。在存储介质是磁带而不是磁盘时，顺序访问是很不方便的。</li>
+<li>随机访问：不按顺序读物文件中的字节或记录，或者按照关键字而不是按照位置来访问记录。可以通过read操作指定开始读取的位置。或者使用seek操作设置当前要读取的位置。</li>
+</ul>
+<h5 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h5><p>​    文件都有数据和属性。另外还有文件创建时期、大小等附加信息。这些信息被称为文件<strong>属性</strong>(attribute)或者<strong>元数据(metadata)</strong>。</p>
+<h4 id="文件系统的实现"><a href="#文件系统的实现" class="headerlink" title="文件系统的实现"></a>文件系统的实现</h4><p>​    文件和目录是如何存储，磁盘空间是如何管理的，怎样使系统更加可靠稳定工作。</p>
+<h4 id="文件系统布局"><a href="#文件系统布局" class="headerlink" title="文件系统布局"></a>文件系统布局</h4><p>​    文件系统存放在磁盘上。多数磁盘划分为一个或多个分区，每个分区有一个独立的文件系统。磁盘的0号扇区称为<strong>主引导记录</strong>（Master Boot Record）,用于指导计算机。在MBR的末尾是分区表。该表给出了每个分区的起始和结束地址。在计算机启动时， BIOS读取并执行MBR。MBR做的第一件事就是确定活动分区，读入它的第一个块，称为<strong>引导块</strong>(boot block)。引导块中的程序将装载该分区的操作系统。</p>
+<h5 id="文件的实现"><a href="#文件的实现" class="headerlink" title="文件的实现"></a>文件的实现</h5><p>​    文件存储的关键问题是记录各个文件分别用到哪些磁盘块。不同操作系统采用不同的方法。</p>
+<ul>
+<li>连续分配： 把每个文件作为一连串连续数据块存储在磁盘上。读取性能高，但是删除部分块后，磁盘会变得零碎</li>
+<li>链表分配：每个块的第一个字作为指向下一块的指针，块的其他部分存放数据。不会出现碎片问题，但是随机读取性能差；存储效率没有连续分配高。</li>
+<li><strong>inode节点</strong>：为每个文件赋予一个i节点，其中列出了文件属性和文件块的磁盘地址。给定i节点，就能找到文件的所有块。inode与真实的文件一一对应，用来记录这个文件的各个属性：权限、属性、所有者、创建时间、最近修改时间等等。</li>
+</ul>
+<h4 id="日志结构文件系统"><a href="#日志结构文件系统" class="headerlink" title="日志结构文件系统"></a>日志结构文件系统</h4><p>​    由于CPU、内存等的发展速度越来越快，相对应的是磁盘速度却没得到快速发展。因此诞生了<strong>日志结构文件系统</strong>。日志结构文件系统的基本思路是：<strong>将整个磁盘结构化为一个日志。每隔一段时间，或有特殊需要时，被缓冲在内存中的所有未决的写操作都被放入到一个单独的段中，作为在日志末尾的一个邻接段写入磁盘</strong>。这些单独的段可能会包括i节点、目录快、数据块。</p>
+<p>​    日志文件系统基于这种假设：文件被缓存在内存中，当缓存越来越多时，cache就会比较符合读的需求，结果就是，与磁盘的交互主要就限制在写操作。日志文件系统将所有的新信息以一种叫做log的连续结构写入磁盘。由于这种方式取消了几乎所有的寻道操作，因此极大地提高了写操作效率。log结构这种连续的属性也允许更快的崩溃恢复。</p>
+<p>​    Windows的NTFS、Linux的EXT3都使用<strong>日志文件系统</strong>。</p>
+<h4 id="虚拟文件系统"><a href="#虚拟文件系统" class="headerlink" title="虚拟文件系统"></a>虚拟文件系统</h4><p>​    由于多种文件系统的存在，在实际应用中是明确可见的。因此绝大多数Unix操作系统都使用了<strong>虚拟文件系统</strong>概念将多种文件系统统一成一个有序的结构。关键的思想就是抽象出所有文件系统中共有的部分，并且将这部分代码放在单独的一层，该层调用底层的实际文件系统来具体管理数据。 </p>
+<h3 id="虚拟化和云"><a href="#虚拟化和云" class="headerlink" title="虚拟化和云"></a>虚拟化和云</h3><p>​    沙盒： 沙盒是一种安全机制，为运行中的程序提供了隔离环境。通常是作为一些来源不可信、具有破坏力或者无法判断程序意图的程序提供实验之用。</p>
+<h4 id="虚拟化"><a href="#虚拟化" class="headerlink" title="虚拟化"></a>虚拟化</h4><p>​    虚拟化的主要思想是虚拟机监控程序(Virtual Machine Monitor  VMM)，在同一个物理硬件中创建出具有多台的多虚拟机假象。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/面试高频考点/" class="archive-article-date">
-  	<time datetime="2019-08-24T15:23:46.933Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/24/操作系统/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/docker学习/" class="archive-article-date">
-  	<time datetime="2019-08-24T15:23:42.764Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/Go/" class="archive-article-date">
-  	<time datetime="2019-08-24T15:23:40.870Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2019/08/24/css：app/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/24/分布式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/css：app/" class="archive-article-date">
-  	<time datetime="2019-08-24T15:23:35.851Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/操作系统/" class="archive-article-date">
-  	<time datetime="2019-08-24T15:23:33.818Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/分布式/" class="archive-article-date">
-  	<time datetime="2019-08-24T15:23:32.285Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/Spring-Aop源码学习/" class="archive-article-date">
-  	<time datetime="2019-08-24T14:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/24/Spring-Aop源码学习/">Spring Aop源码学习</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/hello-world/" class="archive-article-date">
-  	<time datetime="2019-08-24T14:53:48.744Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/24/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -368,8 +367,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

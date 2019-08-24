@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019/8 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Docker学习docker常用命令​    docker pull : 获取image ​    docker build : 创建image -t:image的标签 ​    docker images：列出images ​    docker run： 运行container ​    docker ps: 列出运行的container ​    docker rm:删除container">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/08/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/08/24/docker学习/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Docker学习docker常用命令​    docker pull : 获取image ​    docker build : 创建image -t:image的标签 ​    docker images：列出images ​    docker run： 运行container ​    docker ps: 列出运行的container ​    docker rm:删除container">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-05-08T09:12:55.429Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="Docker学习docker常用命令​    docker pull : 获取image ​    docker build : 创建image -t:image的标签 ​    docker images：列出images ​    docker run： 运行container ​    docker ps: 列出运行的container ​    docker rm:删除container">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,202 +154,206 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-docker学习" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Docker学习"><a href="#Docker学习" class="headerlink" title="Docker学习"></a>Docker学习</h1><h4 id="docker常用命令"><a href="#docker常用命令" class="headerlink" title="docker常用命令"></a>docker常用命令</h4><p>​    docker pull : 获取image</p>
+<p>​    docker build : 创建image -t:image的标签</p>
+<p>​    docker images：列出images</p>
+<p>​    docker run： 运行container</p>
+<p>​    docker ps: 列出运行的container</p>
+<p>​    docker rm:删除container</p>
+<p>​    docker rmi: 删除image</p>
+<p>​    docker cp : 在host和container之间拷贝文件</p>
+<p>​    docker commit : 保存改动为新的image</p>
+<h4 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h4><p>​    Dockerfile是一个文本文件，其中包含了一条条的指令(instruction)，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。</p>
+<p>​    举例创建nginx镜像如下:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mkdir mynginx</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> cd ./mynginx</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> touch Dockerfile</span><br></pre></td></tr></table></figure>
+
+<p>Dockerfile文件内容如下：</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> nginx</span><br><span class="line"><span class="keyword">RUN</span> echo '&lt;h1&gt;Hello Docker&lt;/h1&gt;' &gt; /usr/share/nginx/html/index.html</span><br></pre></td></tr></table></figure>
+
+<h4 id="RUN指令"><a href="#RUN指令" class="headerlink" title="RUN指令"></a>RUN指令</h4><p>​    RUN指令用来执行命令行命令。由于命令行的强大能力，RUN指令在定制镜像时是最常用的指令之一。其格式有两种：</p>
+<ul>
+<li><p>shell格式，如上代码所示</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span> chmod +x /usr/share/nginx</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>exec格式 ： </p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span> ["可执行文件"， "参数1"， "参数2" ]</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="COPY复制指令"><a href="#COPY复制指令" class="headerlink" title="COPY复制指令"></a>COPY复制指令</h4><p>​    COPY指令将构建上下文目录中源路径中的文件(package.json)复制到新的一层镜像内的目标路径位置（/usr/src/app）中。</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">COPY</span> package.json /usr/src/app</span><br></pre></td></tr></table></figure>
+
+<p>源文件可以是多个，甚至可以是通配符，其通配符要符合GO的filepath.Match规则，比如：</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">COPY</span> home* /mydir/</span><br><span class="line"><span class="keyword">COPY</span> hom?.txt /mydir/</span><br></pre></td></tr></table></figure>
+
+<p>使用COPY指令，源文件的各种元数据都会保留。比如读写、执行权限、文件变更时间等。这个特性对于镜像定制很有用。</p>
+<h4 id="ADD添加指令"><a href="#ADD添加指令" class="headerlink" title="ADD添加指令"></a>ADD添加指令</h4><p>​    ADD和COPY的格式与性质基本一致。但是在COPY基础上添加了一些功能。一般最适用的情况，就是自动解压缩的情形。</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> scratch</span><br><span class="line"><span class="keyword">ADD</span> ubuntu-xenial-core-clouding-amd64-root.tar.gz /</span><br></pre></td></tr></table></figure>
+
+<p>ADD指令自动将自动解压缩到目标路径中。</p>
+<h4 id="CMD指令"><a href="#CMD指令" class="headerlink" title="CMD指令"></a>CMD指令</h4><p>​    用于指定默认容器主进程的启动命令。Docker不是虚拟机，容器中的应用都应该以前台执行，而不是像虚拟机、物理机那样用upstart/systemd去启动后台服务，在容器中没有后台服务的概念。</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CMD</span> ["nginx", "-g", "daemon off"]</span><br></pre></td></tr></table></figure>
+
+<h4 id="ENTRYPOINT入口"><a href="#ENTRYPOINT入口" class="headerlink" title="ENTRYPOINT入口"></a>ENTRYPOINT入口</h4><p>​    ENTRYPOINT的格式和RUN指令一样，分为exec和shell格式。</p>
+<p>​    ENTRYPOINT的目的和CMD一样，都是在容器启动时，指定容器启动程序以及参数。ENTRYPOINT在运行时也可以被替代，不过比CMD相比要略显繁琐，需要通过docker run 的参数 –entrypoint 来指定。</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ENTRYPOINT</span> ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/app.jar"]</span><br></pre></td></tr></table></figure>
+
+<h4 id="ARG构建参数"><a href="#ARG构建参数" class="headerlink" title="ARG构建参数"></a>ARG构建参数</h4><p>​    设置环境变量。ARG所设置的构建环境变量的变量，在将来容器运行时是不会存在这些环境变量的。</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ARG</span> JAR_FILE</span><br></pre></td></tr></table></figure>
+
+<h4 id="VOLUME定义匿名卷"><a href="#VOLUME定义匿名卷" class="headerlink" title="VOLUME定义匿名卷"></a>VOLUME定义匿名卷</h4><p>​    容器在运行时，应该尽量保持容器存储层不发生写操作，对于数据库类型需要保存动态数据的应用，其数据库文件应该保存在卷(volume)中、为了防止运行时用户忘记将动态文件所保存的目录挂载为卷，在Dockerfile中，我们可以事先指定某些目录挂载为匿名卷，这样在运行时如果用户不指定挂载，其应用也可以正常运行，不会向容器存储层写入大量数据。</p>
+<p>​    </p>
+<h5 id="镜像上下文-Context"><a href="#镜像上下文-Context" class="headerlink" title="镜像上下文(Context)"></a>镜像上下文(Context)</h5><p>​    docker镜像构建指令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t nginx:latest .</span><br></pre></td></tr></table></figure>
+
+<p>​    docker build -t 命令最后会有一个 .   。表示当前目录，指定上下文路径。</p>
+<p>​    上下文： 用户本地构建时，会指定构建镜像上下文的路径，docker build 命令得知这个路径后，会将该路径下的所有内容打包，然后上传到docker引擎。这样docker引擎收到这个上下文包后，展开就会获得构建镜像所需一切的文件。</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">COPY</span> ./package.json /app/</span><br></pre></td></tr></table></figure>
+
+<p>​    这条命令并不是要复制执行docker build 命令所在目录下的package.json,也不是复制Dockerfile所在目录下的package.json,而是<strong>复制上下文（Context）目录</strong>下的package.json。</p>
+<h4 id="docker-compose"><a href="#docker-compose" class="headerlink" title="docker-compose"></a>docker-compose</h4><h4 id="swarm"><a href="#swarm" class="headerlink" title="swarm"></a>swarm</h4>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/面试高频考点/" class="archive-article-date">
-  	<time datetime="2019-08-24T15:23:46.933Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/24/docker学习/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/docker学习/" class="archive-article-date">
-  	<time datetime="2019-08-24T15:23:42.764Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/Go/" class="archive-article-date">
-  	<time datetime="2019-08-24T15:23:40.870Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2019/08/24/面试高频考点/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/24/Go/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/css：app/" class="archive-article-date">
-  	<time datetime="2019-08-24T15:23:35.851Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/操作系统/" class="archive-article-date">
-  	<time datetime="2019-08-24T15:23:33.818Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/分布式/" class="archive-article-date">
-  	<time datetime="2019-08-24T15:23:32.285Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/Spring-Aop源码学习/" class="archive-article-date">
-  	<time datetime="2019-08-24T14:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/24/Spring-Aop源码学习/">Spring Aop源码学习</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/hello-world/" class="archive-article-date">
-  	<time datetime="2019-08-24T14:53:48.744Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/24/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -368,8 +376,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -8,13 +8,37 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="1、数据库Mysql数据库的索引（b、b+、hash索引、聚簇索引），数据库事务ACID、事务读的几种状态、索引失效问题、 乐观锁(MVCC)和悲观锁        数据库隔离级别       MyISAM和InnoDB区别          聚簇索引     数据库垂直、水平切分 数据库范式 什么是存储过程？​    存储过程是一些预编译的sql语句。更加直白的讲，存储过程是一个记录集，它是由一">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/08/24/面试高频考点/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1、数据库Mysql数据库的索引（b、b+、hash索引、聚簇索引），数据库事务ACID、事务读的几种状态、索引失效问题、 乐观锁(MVCC)和悲观锁        数据库隔离级别       MyISAM和InnoDB区别          聚簇索引     数据库垂直、水平切分 数据库范式 什么是存储过程？​    存储过程是一些预编译的sql语句。更加直白的讲，存储过程是一个记录集，它是由一">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1552033520819.png">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1552183772709.png">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1552812355813.png">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1554191884234.png">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1552792573835.png">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1552805730365.png">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1552656542576.png">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1553580193281.png">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1553580686291.png">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1553580878769.png">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1553581108707.png">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1553583014285.png">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1553583149015.png">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1552275904416.png">
+<meta property="og:image" content="http://images0.cnblogs.com/blog2015/621032/201508/092017231747399.jpg">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1552275387271.png">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1552813453572.png">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1552310115620.png">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1552310869705.png">
+<meta property="og:updated_time" content="2019-08-14T15:48:43.348Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="1、数据库Mysql数据库的索引（b、b+、hash索引、聚簇索引），数据库事务ACID、事务读的几种状态、索引失效问题、 乐观锁(MVCC)和悲观锁        数据库隔离级别       MyISAM和InnoDB区别          聚簇索引     数据库垂直、水平切分 数据库范式 什么是存储过程？​    存储过程是一些预编译的sql语句。更加直白的讲，存储过程是一个记录集，它是由一">
+<meta name="twitter:image" content="c:%5CUsers%5C%E6%9C%B1%E7%AB%8B%E6%9D%BE%5CAppData%5CLocal%5CTemp%5C1552033520819.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,9 +174,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-面试高频考点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-面试高频考点" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
     <div class="article-entry" itemprop="articleBody">
@@ -1212,6 +1234,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -1219,16 +1262,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/24/面试高频考点/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/24/面试高频考点/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/24/docker学习/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -1248,604 +1350,14 @@
 
 
 
-
   
-    <article id="post-docker学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Docker学习"><a href="#Docker学习" class="headerlink" title="Docker学习"></a>Docker学习</h1><h4 id="docker常用命令"><a href="#docker常用命令" class="headerlink" title="docker常用命令"></a>docker常用命令</h4><p>​    docker pull : 获取image</p>
-<p>​    docker build : 创建image -t:image的标签</p>
-<p>​    docker images：列出images</p>
-<p>​    docker run： 运行container</p>
-<p>​    docker ps: 列出运行的container</p>
-<p>​    docker rm:删除container</p>
-<p>​    docker rmi: 删除image</p>
-<p>​    docker cp : 在host和container之间拷贝文件</p>
-<p>​    docker commit : 保存改动为新的image</p>
-<h4 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h4><p>​    Dockerfile是一个文本文件，其中包含了一条条的指令(instruction)，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建。</p>
-<p>​    举例创建nginx镜像如下:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> mkdir mynginx</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> cd ./mynginx</span><br><span class="line"></span><br><span class="line"><span class="meta">$</span> touch Dockerfile</span><br></pre></td></tr></table></figure>
-
-<p>Dockerfile文件内容如下：</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> nginx</span><br><span class="line"><span class="keyword">RUN</span> echo '&lt;h1&gt;Hello Docker&lt;/h1&gt;' &gt; /usr/share/nginx/html/index.html</span><br></pre></td></tr></table></figure>
-
-<h4 id="RUN指令"><a href="#RUN指令" class="headerlink" title="RUN指令"></a>RUN指令</h4><p>​    RUN指令用来执行命令行命令。由于命令行的强大能力，RUN指令在定制镜像时是最常用的指令之一。其格式有两种：</p>
-<ul>
-<li><p>shell格式，如上代码所示</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span> chmod +x /usr/share/nginx</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>exec格式 ： </p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">RUN</span> ["可执行文件"， "参数1"， "参数2" ]</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="COPY复制指令"><a href="#COPY复制指令" class="headerlink" title="COPY复制指令"></a>COPY复制指令</h4><p>​    COPY指令将构建上下文目录中源路径中的文件(package.json)复制到新的一层镜像内的目标路径位置（/usr/src/app）中。</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">COPY</span> package.json /usr/src/app</span><br></pre></td></tr></table></figure>
-
-<p>源文件可以是多个，甚至可以是通配符，其通配符要符合GO的filepath.Match规则，比如：</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">COPY</span> home* /mydir/</span><br><span class="line"><span class="keyword">COPY</span> hom?.txt /mydir/</span><br></pre></td></tr></table></figure>
-
-<p>使用COPY指令，源文件的各种元数据都会保留。比如读写、执行权限、文件变更时间等。这个特性对于镜像定制很有用。</p>
-<h4 id="ADD添加指令"><a href="#ADD添加指令" class="headerlink" title="ADD添加指令"></a>ADD添加指令</h4><p>​    ADD和COPY的格式与性质基本一致。但是在COPY基础上添加了一些功能。一般最适用的情况，就是自动解压缩的情形。</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> scratch</span><br><span class="line"><span class="keyword">ADD</span> ubuntu-xenial-core-clouding-amd64-root.tar.gz /</span><br></pre></td></tr></table></figure>
-
-<p>ADD指令自动将自动解压缩到目标路径中。</p>
-<h4 id="CMD指令"><a href="#CMD指令" class="headerlink" title="CMD指令"></a>CMD指令</h4><p>​    用于指定默认容器主进程的启动命令。Docker不是虚拟机，容器中的应用都应该以前台执行，而不是像虚拟机、物理机那样用upstart/systemd去启动后台服务，在容器中没有后台服务的概念。</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CMD</span> ["nginx", "-g", "daemon off"]</span><br></pre></td></tr></table></figure>
-
-<h4 id="ENTRYPOINT入口"><a href="#ENTRYPOINT入口" class="headerlink" title="ENTRYPOINT入口"></a>ENTRYPOINT入口</h4><p>​    ENTRYPOINT的格式和RUN指令一样，分为exec和shell格式。</p>
-<p>​    ENTRYPOINT的目的和CMD一样，都是在容器启动时，指定容器启动程序以及参数。ENTRYPOINT在运行时也可以被替代，不过比CMD相比要略显繁琐，需要通过docker run 的参数 –entrypoint 来指定。</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ENTRYPOINT</span> ["java", "-Djava.security.egd=file:/dev/./urandom", "-jar", "/app.jar"]</span><br></pre></td></tr></table></figure>
-
-<h4 id="ARG构建参数"><a href="#ARG构建参数" class="headerlink" title="ARG构建参数"></a>ARG构建参数</h4><p>​    设置环境变量。ARG所设置的构建环境变量的变量，在将来容器运行时是不会存在这些环境变量的。</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ARG</span> JAR_FILE</span><br></pre></td></tr></table></figure>
-
-<h4 id="VOLUME定义匿名卷"><a href="#VOLUME定义匿名卷" class="headerlink" title="VOLUME定义匿名卷"></a>VOLUME定义匿名卷</h4><p>​    容器在运行时，应该尽量保持容器存储层不发生写操作，对于数据库类型需要保存动态数据的应用，其数据库文件应该保存在卷(volume)中、为了防止运行时用户忘记将动态文件所保存的目录挂载为卷，在Dockerfile中，我们可以事先指定某些目录挂载为匿名卷，这样在运行时如果用户不指定挂载，其应用也可以正常运行，不会向容器存储层写入大量数据。</p>
-<p>​    </p>
-<h5 id="镜像上下文-Context"><a href="#镜像上下文-Context" class="headerlink" title="镜像上下文(Context)"></a>镜像上下文(Context)</h5><p>​    docker镜像构建指令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t nginx:latest .</span><br></pre></td></tr></table></figure>
-
-<p>​    docker build -t 命令最后会有一个 .   。表示当前目录，指定上下文路径。</p>
-<p>​    上下文： 用户本地构建时，会指定构建镜像上下文的路径，docker build 命令得知这个路径后，会将该路径下的所有内容打包，然后上传到docker引擎。这样docker引擎收到这个上下文包后，展开就会获得构建镜像所需一切的文件。</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">COPY</span> ./package.json /app/</span><br></pre></td></tr></table></figure>
-
-<p>​    这条命令并不是要复制执行docker build 命令所在目录下的package.json,也不是复制Dockerfile所在目录下的package.json,而是<strong>复制上下文（Context）目录</strong>下的package.json。</p>
-<h4 id="docker-compose"><a href="#docker-compose" class="headerlink" title="docker-compose"></a>docker-compose</h4><h4 id="swarm"><a href="#swarm" class="headerlink" title="swarm"></a>swarm</h4>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/24/docker学习/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-Go" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="Go语言特性"><a href="#Go语言特性" class="headerlink" title="Go语言特性"></a>Go语言特性</h4><ul>
-<li>开源</li>
-<li>静态类型和编译型语言</li>
-<li>跨平台</li>
-<li>自动垃圾回收</li>
-<li>原生的并发编程</li>
-<li>完善的构建工具</li>
-<li>多编程范式。（支持函数式编程、面向对象编程）</li>
-<li>代码风格强制统一 （go format）</li>
-<li>高效的编程和运行</li>
-<li>丰富的标准库</li>
-</ul>
-<h4 id="函数标识符"><a href="#函数标识符" class="headerlink" title="函数标识符"></a>函数标识符</h4><p>​    go函数标识符首字母的大小写控制着对应程序实体的访问权限。如果标识符的首字符是大写，那么它所对应的程序实体就可以被本代码包之外的代码访问到，也称为可导出的或公开的。否则，对应的程序实体就只能被本包内的代码访问到，也称为不可导出的或包私有的。</p>
-<h4 id="Go标准命令"><a href="#Go标准命令" class="headerlink" title="Go标准命令"></a>Go标准命令</h4><ul>
-<li>build: 用于编译指定的代码或者GO语言源码文件。命令源码文件会被编译成可执行文件(windows对应exe文件， linux对应sh文件)，并存放到命令执行的目录或者指定目录下。而库源码文件被编译后，则不会在非临时目录中留下任何文件。</li>
-<li>clean： 用于清除因执行其他go命令而遗留下来的临时目录和文件。</li>
-<li>doc： 用于显示go语言代码包以及程序实体的文档</li>
-<li>env： 用于打印GO语言相关的环境信息</li>
-<li>fix： 用于修正指定代码包的源码文件中包含的过时语法或者代码调用。这使得我们在升级go语言版本时，可以非常方便同步升级程序。</li>
-<li>fmt： 用于格式化指定代码包中的GO源码文件。实际上，它是通过gofmt命令来实现功能的。</li>
-<li>generate： 用于识别指定代码包中源码文件中的go:generate注释，并执行其携带的任意命令。该命令独立于go语言标准的编译和安装体系。</li>
-<li>get： 下载、编译并安装指定的代码及其依赖包。</li>
-<li>install： 用于编译并安装指定的代码包及其依赖包。安装命令源码文件之后，代码所在的工作区目录的bin子目录，或者当前环境变量GOBIN指向的目录会生成所对应的可执行文件。</li>
-<li>list： 用于显示指定代码包中的信息</li>
-<li>run： 用于编译并运行指定的命令源码文件。当不想生成可执行文件而直接运行命令源码文件时，就需要使用它。</li>
-<li>tool：用于运行GO语言的特殊工具</li>
-</ul>
-<ul>
-<li><p>vet： 用于检查指定代码包的GO语言源码，并报告发现可疑代码问题。</p>
-</li>
-<li><p>version： GO语言版本以及环境信息。</p>
-</li>
-</ul>
-<h4 id="Go语言中，new-和make-的区别？"><a href="#Go语言中，new-和make-的区别？" class="headerlink" title="Go语言中，new()和make()的区别？"></a>Go语言中，new()和make()的区别？</h4><p>​    new是内建函数，定义如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">new</span><span class="params">(Type)</span> *<span class="title">Type</span></span></span><br></pre></td></tr></table></figure>
-
-<p>官方文档对于其描述是：内建函数new用来分配内存，它的第一个参数是一个类型，不是一个值，它的<strong>返回值是一个指向新的分配类型零值的指针</strong>。</p>
-<p>make也是内建函数，官方对它的描述是：内建函数make用来为slice，map和chan类型分配内存和初始化一个对象，跟new类似，第一个参数也是一个类型而不是一个值，跟new不同的是，<strong>make返回类型的引用而不是指针</strong>，返回值也依赖于具体传入的类型。</p>
-<p>总结：new的作用就是初始化一个指向类型的指针，make的作用为slice，map或chan初始化并返回引用T。</p>
-<p>Go语言中的引用类型有：映射（Map）、数组切片(slice)、通道（channel）,方法和函数。</p>
-<p>在<strong>使用指针之后，本来是值传递的整数类型在函数或者方法中修改会影响到原变量的值</strong>。</p>
-<h4 id="Go中的值传递"><a href="#Go中的值传递" class="headerlink" title="Go中的值传递"></a>Go中的值传递</h4><p>​    Go语言中所有的传参都是值传递(传递值)，都是一个副本，一个拷贝。因为拷贝的内容有时候是非引用类型(int ,string, struct这些)，这样就在函数中无法修改原内容数据；有的是引用类型（指针、map、slice、chan等），这样就可以修改原内容数据。</p>
-<h4 id="defer"><a href="#defer" class="headerlink" title="defer"></a>defer</h4><p>​    Go语言的defer语句会将后面跟随的语句进行延迟处理。在defer归属的函数即将返回时，将延迟处理的语句按照defer的逆序来进行执行。也就是说，先被defer的语句最后被执行，最后被defer的语句，最先被执行。</p>
-<h4 id="Go语言处理运行时错误"><a href="#Go语言处理运行时错误" class="headerlink" title="Go语言处理运行时错误"></a>Go语言处理运行时错误</h4><p>​    Go语言的错误处理思想及其设计包含一下特征：</p>
-<ul>
-<li>一个可能造成错误的函数，需要返回值中返回一个错误接口。如果调用时成功的，错误接口将返回nil，否则将返回错误。</li>
-<li>在函数调用后需要检查错误，如果发生错误，进行必要的错误处理。</li>
-</ul>
-<p>Go语言没有类似于Java的异常处理机制，虽然可以使用defer、panic、recover来模拟，但是官方并不主张这么做。</p>
-<h4 id="Go语言中的空接口"><a href="#Go语言中的空接口" class="headerlink" title="Go语言中的空接口"></a>Go语言中的空接口</h4><p>​    空接口是接口类型的特殊形式，空接口没有任何方法，因此任何类型都无需实现空接口。从实现的角度来看，任何值都满足这个接口的需求。因此空接口类型可以保存任何值，也可以从空接口中取出值。</p>
-<p>​    空接口类型类似于C#或者Java中的object。</p>
-<p>​    空接口的内部实现保存了对象的类型和指针。使用空接口保存一个数据的过程会比直接调用数据对应类型的变量稍慢。因此在开发中，应在需要中使用空接口，而不是在所有地方使用空接口。</p>
-<h4 id="Go并发"><a href="#Go并发" class="headerlink" title="Go并发"></a>Go并发</h4><p>​    Go语言通过编译器运行时(runtime)，从语言上支持了并发的特性。Go语言的并发通过goroutine特性完成。goroutine类似于线程，但是可以根据需要创建多个和goroutine并发工作。goroutine是由Go语言的运行时调度完成，而线程是由操作系统调度完成。</p>
-<p>​    Go语言还通过提供channel在多个goroutine之间进行通信。goroutine和channel是go语言秉承的CSP(Communicating Sequential Process)并发模式的重要实现基础。</p>
-<p>​    goroutine的概念类似于线程，但是goroutine是由Go程序运行时的调度和管理。Go程序会智能地将goroutine中的任务合理地分配给每个CPU。</p>
-<p>​    Go语言从main包的main函数开始，在程序启动时，Go程序会为main函数创建一个默认的goroutine。</p>
-<p>​    <strong>Go语言中使用go关键字为函数创建一个goroutine。一个函数可以创建多个goroutine，一个goroutine未必对应一个函数</strong>。</p>
-<p>​    在Go程序运行时(runtime)实现了一个小型的任务管理器。这套调度器的工作原理类似于操作系统调度线程，Go程序调度器可以高效地将CPU资源分配给每一个任务。传统逻辑中，开发者需要维护线程池中与CPU核心数量的对应关系。同样地，Go也可以通过runtime.GOMAXPROCS()函数做到。`</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">runtime.GOMAXPROCS(runtime.NumCPU())</span><br></pre></td></tr></table></figure>
-
-<p>​    单纯将函数并发执行是没有意义的。函数与函数之间需要交换数据才能体现并发执行的意义。虽然可以使用共享内存进行数据交换，但是在共享内存在不同的goroutine之间容易产生竟态问题。为了保证数据交换的正确性，必须使用互斥量对内存进行加锁，这种做法势必造成性能问题。</p>
-<p>​    Go语言中的通道(channel)是一种特殊的类型。在任何时候，同时只能有一个goroutine访问通道进行发送和获取数据。goroutine间通过通道就可以进行通信。通道就像一个传送带或队列，总是遵循先进先出的规则，保证收发数据的正确性。</p>
-<h4 id="Go等待組-waitgroup"><a href="#Go等待組-waitgroup" class="headerlink" title="Go等待組(waitgroup)"></a>Go等待組(waitgroup)</h4><p>​    除了可以使用通道(channel)和互斥锁进行两个并发程序之间的同步之外，还可以使用等待组(waitgroup)进行多个任务的同步，类似于java的CyclicBarrier。等待组可以保证在并发环境中完成指定数量的任务。</p>
-<p>​    </p>
-<h4 id="Go的跨平台"><a href="#Go的跨平台" class="headerlink" title="Go的跨平台"></a>Go的跨平台</h4><p>​    go并没有真正意义上的实现跨平台。go程序先被编译成机器码，这个机器码是针对特定的平台来生成的机器码，不同的平台要重新编译，编译出来的程序能够直接运行（类似于C/C++，但C/C++需要自己管理内存）。与java不同，java程序需要jvm本地才能运行，但是java对于所有的平台都只需要编译一次，jvm底层完成了平台的相应处理（不同平台有着不同的jvm）。</p>
-<h5 id="Go切片"><a href="#Go切片" class="headerlink" title="Go切片"></a>Go切片</h5><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sli := <span class="built_in">make</span>([]<span class="keyword">type</span>, <span class="built_in">len</span>, <span class="built_in">cap</span>)</span><br></pre></td></tr></table></figure>
-
-<p>​        第一个参数：数组类型</p>
-<p>​        第二个参数：数组长度</p>
-<p>​        第三个参数：数组容量</p>
-<h4 id="Go管道-channel"><a href="#Go管道-channel" class="headerlink" title="Go管道(channel)"></a>Go管道(channel)</h4><p>​    当一个资源需要在goroutine之间共享时，通道在goroutine之间架起了一个管道，并提供了确保同步交换数据的机制。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个无缓冲通道</span></span><br><span class="line">unBufferedChannel := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">string</span>)</span><br><span class="line"><span class="comment">//创建一个缓冲通道</span></span><br><span class="line">bufferedChannel := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">string</span> , <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//向通道发送字符串</span></span><br><span class="line">unBufferedChannel &lt;- <span class="string">"Hello World"</span></span><br><span class="line"><span class="comment">//向通道中取出数据</span></span><br><span class="line">value := &lt;- unBufferedChannel</span><br></pre></td></tr></table></figure>
-
-<h5 id="无缓冲管道"><a href="#无缓冲管道" class="headerlink" title="无缓冲管道"></a>无缓冲管道</h5><p>​        无缓冲通道(unbuffered channel)是指在接收前没有能力保存任何值的通道。这种类型的通道要求发送goroutine和接收goroutine同时准备好，才能完成发送和接收操作。如果两个goroutine没有同时准备好，通道就会导致执行发送或接收操作的goroutine阻塞等待。这种对通道进行发送和接收的交互行为本身就是同步的。</p>
-<p>​    </p>
-<h5 id="有缓冲管道"><a href="#有缓冲管道" class="headerlink" title="有缓冲管道"></a>有缓冲管道</h5><p>​        有缓冲管道是一种在被接收前能存储一个或者多个值的通道。这种类型的通道并不强制要求goroutine之间必须同时完成接收和发送。通道会阻塞发送和接收动作的条件也会不同。只有在通道中没有要接收的值时，才会阻塞。只有在通道没有可用缓冲区容纳被发送的值时，发送动作才会阻塞。</p>
-<h3 id="Go的并发机制"><a href="#Go的并发机制" class="headerlink" title="Go的并发机制"></a>Go的并发机制</h3><p>​    <strong>go并发宗旨：不要用共享内存的方式来进行通信。作为替代，应该以通信作为手段来共享内存</strong>。</p>
-<p>go不推荐用共享内存的方式来传递数据，而推荐使用channel。channel用来在多个goroutine之间传递数据，并且还会保证整个过程的并发安全性。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/24/Go/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-css：app" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="计算机系统"><a href="#计算机系统" class="headerlink" title="计算机系统"></a>计算机系统</h2><p>​    </p>
-<h4 id="从hello-c到hello-exe-hello-sh的编译过程"><a href="#从hello-c到hello-exe-hello-sh的编译过程" class="headerlink" title="从hello.c到hello.exe/hello.sh的编译过程"></a>从hello.c到hello.exe/hello.sh的编译过程</h4><p>​        为了能够在系统上运行hello.c程序，每条c语句都必须被其他程序转换成一系列的低级机器语言指令。然后这种机器指令按照一种特定的格式打好包，就形成了可执行目标程序，可执行目标程序以二进制磁盘文件的形式存放起来。</p>
-<p>​    计算机执行机器代码，用字节序列编码低级的操作，包括处理数据、管理内存、读写存取设备上的数据，以及利用网络通信，编译器基于编程语言的规则、目标机器的指令集和操作系统遵循的惯例，经过一系列的阶段生成机器代码。 GCC C语言编译器以汇编代码的形式产生输出，汇编代码是机器代码的文本表示，给出程序中的每一条指令。然后GCC调用汇编器和链接器，根据汇编代码生成可执行的机器代码。</p>
-<p>​        机器执行的程序就是字节序列，它是一系列指令的编码，机器对于产生这些指令的源代码一无所知。</p>
-<h4 id="编译系统"><a href="#编译系统" class="headerlink" title="编译系统"></a>编译系统</h4><p>​    编译系统(Compilation system)由四步构成：预处理器、编译器、汇编器、链接器组成。</p>
-<h3 id="计算机系统硬件组成"><a href="#计算机系统硬件组成" class="headerlink" title="计算机系统硬件组成"></a>计算机系统硬件组成</h3><ol>
-<li><p><strong>总线</strong></p>
-<p>​    贯穿整个系统的是一组电子管道，称为总线。总线携带信息字节并负责在各个组件之间传递。通常总线被设计成传递固定长的字节块，也就是字(word)。字中的字节数（即字长）是一个基本的系统参数，各个系统中都不尽相同。现在的大多数机器字长要么是4个字节(32为系统)，要么是8个字节（64位）。</p>
-</li>
-<li><p><strong>I/O</strong>设备</p>
-<p>I/O设备是系统与外部世界的联系通道。每个i/o设备都通过一个控制器或者适配器与I/O总线相连。控制器和适配器之间的区别主要在于它们的封装方式。控制器是I/O设备本身或者系统的主印制电路板上的芯片组。而适配器则是一块插在主板插槽上的卡。无论如何，它们的功能都是在I/O总线和I/O设备之间传递信息。</p>
-</li>
-<li><p><strong>主存</strong></p>
-<p>主存是一个临时存储设备，在处理器执行程序时，用来存放程序和程序运行时刻数据。</p>
-</li>
-<li><p><strong>CPU</strong></p>
-<p>处理器，解释或执行存储在主存中指令的引擎。处理器的核心是一个大小为一个字的存储设备（或寄存器），称为程序计数器（PC）。在任何时刻，PC都指向主存中的某条机器语言指令。</p>
-<p>从系统通电开始，直到系统断电，处理器一直在不断地执行程序计数器指向的指令，再更新程序计数器，使其指向下一条指令。</p>
-</li>
-</ol>
-<h4 id="高速缓存"><a href="#高速缓存" class="headerlink" title="高速缓存"></a>高速缓存</h4><p>​        程序和程序数据最初是被存放在磁盘上 。当程序被加载时，它们复制到主存，当处理器运行程序时，指令又从主存复制到处理器。从程序员的角度来看，复制就是开销，减慢了程序“真正的工作”。因此，系统设计者得一个主要目标就是使这些复制操作尽可能快的执行。</p>
-<p>​        根据机械原理，较大的存储设备要比较小的存储设备运行的慢，而快速设备的造价远高于同类的低速设备。类似地，一个典型的寄存器文件只存储几百字节的信息。而主存中可存放十几亿个字节。但是，处理器从寄存器中读取数据比从主存中读取要快100倍。</p>
-<p>​        针对这种处理器与主存之间速度的差异，系统设计者采用了更小更快的存储设备，称为高速缓存寄存器(cache memory)，作为暂存的集结领域，存放处理器近期可能会需要的信息。</p>
-<h3 id="信息存储"><a href="#信息存储" class="headerlink" title="信息存储"></a>信息存储</h3><p>​        大多数计算机都采用8位的块，或者称为字节，作为最小的可寻址的内存单位，而不是访问内存中单独的位。机器级程序将内存视为非常大的字节数组，称为虚拟内存(virtual memory)。内存的每个字节都用一个唯一的数字来标识，称为它的地址，所有可能地址的空间的集合就称为虚拟地址空间。</p>
-<p>​        当我们使用高级语言编程时(C、C++、Java)，机器屏蔽了程序的细节，即机器级的实现。与此相反，当用汇编代码编程的时候，程序员必须指定程序用来执行计算的低级指令。高级语言提供的抽象级别比较高，大多数时候，在这个级别上工作的效率比较高，也更可靠。编译器提供的类型检查能帮助我们发现许多程序错误，并能够保证一致的方式来引用和处理数据。通常情况下，使用现代的优化编译器产生的代码至少于一个熟练的汇编语言程序员手工代码一样有效。最大的优点是，用高级语言编写的程序可以在很多不同的机器上编译与运行。而汇编代码则是与特定机器密切相关的。</p>
-<p>​        对于严谨的程序员而言，能够阅读和理解汇编代码仍然是一项很重要的功能。通常将尝试源代码的各种形式，每次编译并检查产生的汇编代码，从而了解程序的运行情况。</p>
-<h3 id="处理器体系结构"><a href="#处理器体系结构" class="headerlink" title="处理器体系结构"></a>处理器体系结构</h3><p>​    处理器必须执行一系列指令，每条指令执行某个简单操作，例如两个数相加。指令被编码为由一个或多个字节序列组成的二进制格式。一个处理器所支持的指令和指令的字节级编码称为它的<strong>指令级体系结构</strong>(Instruction-Set Architectute, <strong>ISA</strong>)，不同的处理器，都有着不同的ISA。一个程序被编译成在一种机器上运行，就不能在另外一台机器上执行。</p>
-<p>​        ISA模型看起来应该是顺序指令执行，也就是先取出一条指令，等到它执行完毕，再开始下一条。然而，与一个时刻只执行一条指令相比，通过同时处理多条指令的不同部分，处理器可以获得更高的性能。为了保证处理器能够得到同顺序执行的结果，人们采用了一些特殊的机制。</p>
-<h3 id="存储器层次结构"><a href="#存储器层次结构" class="headerlink" title="存储器层次结构"></a>存储器层次结构</h3><p>​        CPU执行指令，而存储器系统为CPU存放指令和数据。存储器系统是一个具有不同容量、成本和访问时间的存储设备的层次结构。CPU寄存器保存着最常用的数据。靠近CPU的小的、快速的高速缓存存储器作为一部分存储在相对慢速的主存储器中数据和指令的缓冲区域。主存缓存在容量较大、慢速磁盘上的数据，而这些磁盘上常常又做为存储在通过网络连接的其他机器的磁盘或者磁带上的数据的缓冲区域。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/24/css：app/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-操作系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h3 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h3><p>​    计算机分层存储器体系(memory hierarchy)：计算机有若干兆快速、昂贵的高速缓存(cache)、数千兆（G）速度与价格适中的同样易失性的内存、以及几TB的低速、廉价、非易失性的磁盘存储。</p>
-<p>​    最底层的高速缓存由硬件来直接管理。</p>
-<h5 id="无存储器抽象的缺点"><a href="#无存储器抽象的缺点" class="headerlink" title="无存储器抽象的缺点"></a>无存储器抽象的缺点</h5><p>​    最简单的存储器抽象就是没有抽象。每个程序直接访问物理内存，指令如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MOV REGISTER1, 1000</span><br></pre></td></tr></table></figure>
-
-<p>​    计算机会直接将位置1000的物理内存上的内容直接移到REGISTER1上。呈现给编程人员的存储器模型就是简单的物理内存。在这种情况下，<strong>想要在内存中同时运行两个程序是不可能的</strong>。 </p>
-<h5 id="存储器抽象：-地址空间"><a href="#存储器抽象：-地址空间" class="headerlink" title="存储器抽象： 地址空间"></a>存储器抽象： 地址空间</h5><p>​    想要使得多个应用程序同时处于内存中不受影响，需要解决两个问题：<strong>保护和重定向</strong>。地址空间就像进程中创建了一类抽象的CPU用以运行程序一样，地址空间为程序创造了一种抽象的内存。地址空间是一个进程用于寻址内存的一套地址集合。每个进程都有自己的地址空间，并且这个地址空间独立于其他的地址空间。</p>
-<p>​    比较难的是给每个程序一个自己独有的地址空间，使得一个程序中的地址28与另一个程序中的地址28物理地址不同。所解决的办法就是采用<strong>动态重定位</strong>。动态重定位就是把每个程序的地址空间映射到物理地址的不同部分。所实现的方法就是在每个CPU中配置了两个特殊硬件寄存器，通常叫做<strong>基址寄存器</strong>和<strong>界限寄存器</strong>。当一个程序运行时，程序的初始物理地址装载到基址寄存器中，程序的长度装载到界限寄存器中。</p>
-<p>​    每次一个进程访问内存，取一条指令，读或写一个数据字，CPU硬件会把地址发送到内存总线之前，自动把基址值加到进程发出的地址值上。如果访问的地址超过了界限，会产生错误并终止访问。</p>
-<p>​    使用基址寄存器和界限寄存器是给每个进程提供地址空间非常容易的方法，因为每个内存地址在送到内存之前，都会自动加上基址寄存器的内容。</p>
-<p>​    使用基址寄存器和界限寄存器重定向的缺点是：每次访问内存都需要进行加法和比较运算。</p>
-<h4 id="交换技术"><a href="#交换技术" class="headerlink" title="交换技术"></a>交换技术</h4><p>​    交换技术：把一个进程完整调入内存，使该进程运行一段时间，然后将它存回磁盘。空闲进程主要存储在磁盘上，所以当他们不运行时就不会占用内存。</p>
-<p>​    交换在内存中产生了多个空闲区，通过把所有的进程尽可能向下移动，有可能将这些小的空闲区合并成一大块。这个技术称为<strong>内存紧缩</strong>。通常不会进行这个操作，因为会耗费大量的CPU时间。例如，有一台16GB内存的计算机每8ns复制8个字节，那么它紧缩全部，需要花费16s的时间。</p>
-<p>​    许多程序设计语言都允许从堆中动态分配内存，那么当进程空间试图增长时，就会出现问题。为了减少因为内存不够而引起的进程交换和移动所产生的开销，一种可用的方法是：当<strong>换入或移动进程时为它分配一些额外的内存</strong>。</p>
-<p>​    在动态分配内存时，操作系统必须对其进行管理。一般而言，有两种方法可以跟踪内存使用情况：<strong>位图</strong>和<strong>空闲区链表</strong>。</p>
-<p>​    空闲链表存储管理：最佳适配法、首次适应法、最差适配法、快速适配法</p>
-<p>​    </p>
-<h4 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h4><p>​    虚拟内存使得程序在只有一部分被调入内存的情况下运行。虚拟内存的基本思想是：每个程序拥有自己的地址空间，这个空间被分割诚多个块，每一块被称为页或者页面，每一页拥有连续的地址范围。这些页被映射到物理内存，但是并不是所有的页面都必须在内存中才能运行程序。从某个角度来看，虚拟内存是对基址寄存器和界限寄存器的综合。</p>
-<p>​    由程序产生的地址被称为虚拟地址。它们构成了一个虚拟地址空间（virtual address space）。在没有虚拟内存的计算机上，系统直接将虚拟地址送到内存总线上，读写操作使用具有同样的地址的物理内存字；而在使用虚拟内存的情况下，虚拟地址不是被直接送到地址总线上，而是被送到内存管理单元（Memory Management Unit）上，MMU将虚拟地址直接映射为物理地址。</p>
-<p>​    页表：页表的目的是把虚拟页面映射成页框。从数学角度看，页表是一个函数，它的参数是虚拟页号，结果是物理页框号。</p>
-<p>​    页面置换算法：FIFO、最近最少使用、最近未使用、时钟页面置换算法、最优算法</p>
-<h5 id="分段：分页的虚拟内存都是一维的，虚拟地址从0到最大地址，一个地址接着另外一个地址。对许多问题来说，有两个或者多个独立的地址空间可能会比只有一个好得多。一个直观并且通用的方法是在机器上提供多个互相独立的称为段（segment）。每个段由一个或者多个最大的线性地址序列构成。段的长度在运行期间可以动态改变，比如，堆栈长度在数据压入时会增长，在数据弹出时又会被减小。"><a href="#分段：分页的虚拟内存都是一维的，虚拟地址从0到最大地址，一个地址接着另外一个地址。对许多问题来说，有两个或者多个独立的地址空间可能会比只有一个好得多。一个直观并且通用的方法是在机器上提供多个互相独立的称为段（segment）。每个段由一个或者多个最大的线性地址序列构成。段的长度在运行期间可以动态改变，比如，堆栈长度在数据压入时会增长，在数据弹出时又会被减小。" class="headerlink" title="分段：分页的虚拟内存都是一维的，虚拟地址从0到最大地址，一个地址接着另外一个地址。对许多问题来说，有两个或者多个独立的地址空间可能会比只有一个好得多。一个直观并且通用的方法是在机器上提供多个互相独立的称为段（segment）。每个段由一个或者多个最大的线性地址序列构成。段的长度在运行期间可以动态改变，比如，堆栈长度在数据压入时会增长，在数据弹出时又会被减小。"></a>分段：分页的虚拟内存都是一维的，虚拟地址从0到最大地址，一个地址接着另外一个地址。对许多问题来说，有两个或者多个独立的地址空间可能会比只有一个好得多。一个直观并且通用的方法是在机器上提供多个互相独立的称为<strong>段</strong>（segment）。每个段由一个或者多个最大的线性地址序列构成。段的长度在运行期间可以动态改变，比如，堆栈长度在数据压入时会增长，在数据弹出时又会被减小。</h5><p>​    要在分段或者二维的存储器中指示一个地址，程序必须提供两个部分地址：一个段号和一个段内地址。<strong>段是一个逻辑实体，程序员知道这点并且把它作为一个逻辑实体来使用</strong>。</p>
-<p>​    <strong>分段有助于几个进程之间共享过程和数据</strong>。例如，在分段系统中，可以把图像库放到一个单独的段中由各个进程共享，从而不再需要在每个进程的地址空间中都保存一份。</p>
-<h3 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h3><p>​    就像操作系统提取处理器的概念来建立进程的抽象，以及提取物理存储器的概念来建立进程地址空间的抽象那样，我们可以用一个新的抽象-文件，来解决一些存储的问题。</p>
-<p>​    文件时进程创建的信息逻辑单元。一个磁盘通常包含几千个甚至几百万个文件，每个文件时独立于其他文件的，唯一不同的是文件对磁盘的建模，而非对RAM的建模。事实上，如果能把每个文件看成一个地址空间，那么就能理解文件的本质了。</p>
-<p>​    </p>
-<h5 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h5><p>​    文件可以有多种构造方式，包括字节序列、记录序列、树。事实上操作系统并不关心文件内容是什么，操作系统所见到的就是字节，其文件内容的任何含义只在用户程序中解释。Unix和Windows都采用这种方法。</p>
-<p>​    <strong>.</strong>指向当前目录，<strong>..</strong>指向上一级目录。</p>
-<h5 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h5><p>​    包括普通文件和目录，unix还有字符特殊文件和块特殊文件。<strong>普通文件包括ASCII文件和二进制文件</strong>。文件系统通常提供目录或者文件夹用于记录文件的位置，在很多系统中，目录本身也是文件。目录包括以及目录系统和层次文件系统。</p>
-<h5 id="文件访问"><a href="#文件访问" class="headerlink" title="文件访问"></a>文件访问</h5><ul>
-<li>顺序访问。进程从系统中可以从头开始按照顺序读取文件的全部字节和记录，但不能跳过某一些内容，也不能不按顺序读取。在存储介质是磁带而不是磁盘时，顺序访问是很不方便的。</li>
-<li>随机访问：不按顺序读物文件中的字节或记录，或者按照关键字而不是按照位置来访问记录。可以通过read操作指定开始读取的位置。或者使用seek操作设置当前要读取的位置。</li>
-</ul>
-<h5 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h5><p>​    文件都有数据和属性。另外还有文件创建时期、大小等附加信息。这些信息被称为文件<strong>属性</strong>(attribute)或者<strong>元数据(metadata)</strong>。</p>
-<h4 id="文件系统的实现"><a href="#文件系统的实现" class="headerlink" title="文件系统的实现"></a>文件系统的实现</h4><p>​    文件和目录是如何存储，磁盘空间是如何管理的，怎样使系统更加可靠稳定工作。</p>
-<h4 id="文件系统布局"><a href="#文件系统布局" class="headerlink" title="文件系统布局"></a>文件系统布局</h4><p>​    文件系统存放在磁盘上。多数磁盘划分为一个或多个分区，每个分区有一个独立的文件系统。磁盘的0号扇区称为<strong>主引导记录</strong>（Master Boot Record）,用于指导计算机。在MBR的末尾是分区表。该表给出了每个分区的起始和结束地址。在计算机启动时， BIOS读取并执行MBR。MBR做的第一件事就是确定活动分区，读入它的第一个块，称为<strong>引导块</strong>(boot block)。引导块中的程序将装载该分区的操作系统。</p>
-<h5 id="文件的实现"><a href="#文件的实现" class="headerlink" title="文件的实现"></a>文件的实现</h5><p>​    文件存储的关键问题是记录各个文件分别用到哪些磁盘块。不同操作系统采用不同的方法。</p>
-<ul>
-<li>连续分配： 把每个文件作为一连串连续数据块存储在磁盘上。读取性能高，但是删除部分块后，磁盘会变得零碎</li>
-<li>链表分配：每个块的第一个字作为指向下一块的指针，块的其他部分存放数据。不会出现碎片问题，但是随机读取性能差；存储效率没有连续分配高。</li>
-<li><strong>inode节点</strong>：为每个文件赋予一个i节点，其中列出了文件属性和文件块的磁盘地址。给定i节点，就能找到文件的所有块。inode与真实的文件一一对应，用来记录这个文件的各个属性：权限、属性、所有者、创建时间、最近修改时间等等。</li>
-</ul>
-<h4 id="日志结构文件系统"><a href="#日志结构文件系统" class="headerlink" title="日志结构文件系统"></a>日志结构文件系统</h4><p>​    由于CPU、内存等的发展速度越来越快，相对应的是磁盘速度却没得到快速发展。因此诞生了<strong>日志结构文件系统</strong>。日志结构文件系统的基本思路是：<strong>将整个磁盘结构化为一个日志。每隔一段时间，或有特殊需要时，被缓冲在内存中的所有未决的写操作都被放入到一个单独的段中，作为在日志末尾的一个邻接段写入磁盘</strong>。这些单独的段可能会包括i节点、目录快、数据块。</p>
-<p>​    日志文件系统基于这种假设：文件被缓存在内存中，当缓存越来越多时，cache就会比较符合读的需求，结果就是，与磁盘的交互主要就限制在写操作。日志文件系统将所有的新信息以一种叫做log的连续结构写入磁盘。由于这种方式取消了几乎所有的寻道操作，因此极大地提高了写操作效率。log结构这种连续的属性也允许更快的崩溃恢复。</p>
-<p>​    Windows的NTFS、Linux的EXT3都使用<strong>日志文件系统</strong>。</p>
-<h4 id="虚拟文件系统"><a href="#虚拟文件系统" class="headerlink" title="虚拟文件系统"></a>虚拟文件系统</h4><p>​    由于多种文件系统的存在，在实际应用中是明确可见的。因此绝大多数Unix操作系统都使用了<strong>虚拟文件系统</strong>概念将多种文件系统统一成一个有序的结构。关键的思想就是抽象出所有文件系统中共有的部分，并且将这部分代码放在单独的一层，该层调用底层的实际文件系统来具体管理数据。 </p>
-<h3 id="虚拟化和云"><a href="#虚拟化和云" class="headerlink" title="虚拟化和云"></a>虚拟化和云</h3><p>​    沙盒： 沙盒是一种安全机制，为运行中的程序提供了隔离环境。通常是作为一些来源不可信、具有破坏力或者无法判断程序意图的程序提供实验之用。</p>
-<h4 id="虚拟化"><a href="#虚拟化" class="headerlink" title="虚拟化"></a>虚拟化</h4><p>​    虚拟化的主要思想是虚拟机监控程序(Virtual Machine Monitor  VMM)，在同一个物理硬件中创建出具有多台的多虚拟机假象。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/24/操作系统/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-分布式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>分布式系统是由多个节点通过网络连接在一起并通过消息的传递来进行协调的系统。</p>
-<h4 id="分布式系统的难点"><a href="#分布式系统的难点" class="headerlink" title="分布式系统的难点"></a>分布式系统的难点</h4><ol>
-<li><strong>缺乏全局时钟</strong>：每个节点都有自己的时钟，通过相互发送消息进行协调时，如果仍然依赖时序，会相对比较难处理。</li>
-<li><strong>面对故障独立性</strong>。</li>
-<li><strong>单点故障</strong></li>
-<li><strong>事务的挑战</strong></li>
-</ol>
-<h4 id="消息中间件的好处"><a href="#消息中间件的好处" class="headerlink" title="消息中间件的好处"></a>消息中间件的好处</h4><p>​    异步、解耦、削峰</p>
-<p>从功能角度看，分布式框架通常包括两个重要功能：<strong>服务治理中心</strong>和<strong>服务注册中心</strong>。</p>
-<p>服务注册中心负责服务的发布和通知，通常支持对等集群部署，某一个服务注册中心宕机并不会导致整个服务注册中心集群不可用。即使整个服务注册中心全部宕机，也只影响新服务的注册和发布，不影响已经发布的服务的访问。</p>
-<p>服务治理中心通常包含服务治理接口和服务治理portal，架构师、测试人员和系统运维人员通过服务治理Portal对服务的运行状态、历史数据、健康度和调用关系等进行可视化的分析和维护，目标就是要优化服务，防止服务架构腐化，保证服务高质量运行。</p>
-<h4 id="应用服务化后的性能"><a href="#应用服务化后的性能" class="headerlink" title="应用服务化后的性能"></a>应用服务化后的性能</h4><p>​    应用服务化之后，由原来的本地API调用变成跨进程远程服务调用，网络通信、消息序列化和反序列化、反射调用和动态代理都会导致性能损耗、时延增加。对于复杂的应用，例如购买商品，后台会涉及到100多个服务调用。如果服务框架的性能比较差，时延将会放大数十倍，因此分布式服务框架的性能指标非常重要。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/24/分布式/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spring-Aop源码学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/24/Spring-Aop源码学习/">Spring Aop源码学习</a>
-    </h1>
   
 
-        
-        <a href="/2019/08/24/Spring-Aop源码学习/" class="archive-article-date">
-  	<time datetime="2019-08-24T14:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/24/Spring-Aop源码学习/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/24/hello-world/">Hello World</a>
-    </h1>
   
 
-        
-        <a href="/2019/08/24/hello-world/" class="archive-article-date">
-  	<time datetime="2019-08-24T14:53:48.744Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/24/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
+
   
 
 
@@ -1868,8 +1380,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
