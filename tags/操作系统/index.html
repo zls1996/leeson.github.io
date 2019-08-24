@@ -6,19 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Tag: 操作系统 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Go语言特性 开源 静态类型和编译型语言 跨平台 自动垃圾回收 原生的并发编程 完善的构建工具 多编程范式。（支持函数式编程、面向对象编程） 代码风格强制统一 （go format） 高效的编程和运行 丰富的标准库  函数标识符​    go函数标识符首字母的大小写控制着对应程序实体的访问权限。如果标识符的首字符是大写，那么它所对应的程序实体就可以被本代码包之外的代码访问到，也称为可导出的或公开的">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/2019/08/24/Go/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/操作系统/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Go语言特性 开源 静态类型和编译型语言 跨平台 自动垃圾回收 原生的并发编程 完善的构建工具 多编程范式。（支持函数式编程、面向对象编程） 代码风格强制统一 （go format） 高效的编程和运行 丰富的标准库  函数标识符​    go函数标识符首字母的大小写控制着对应程序实体的访问权限。如果标识符的首字符是大写，那么它所对应的程序实体就可以被本代码包之外的代码访问到，也称为可导出的或公开的">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-06-07T08:08:34.618Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="Go语言特性 开源 静态类型和编译型语言 跨平台 自动垃圾回收 原生的并发编程 完善的构建工具 多编程范式。（支持函数式编程、面向对象编程） 代码风格强制统一 （go format） 高效的编程和运行 丰富的标准库  函数标识符​    go函数标识符首字母的大小写控制着对应程序实体的访问权限。如果标识符的首字符是大写，那么它所对应的程序实体就可以被本代码包之外的代码访问到，也称为可导出的或公开的">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,227 +150,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Go" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-    <div class="article-entry" itemprop="articleBody">
+    
       
-        <h4 id="Go语言特性"><a href="#Go语言特性" class="headerlink" title="Go语言特性"></a>Go语言特性</h4><ul>
-<li>开源</li>
-<li>静态类型和编译型语言</li>
-<li>跨平台</li>
-<li>自动垃圾回收</li>
-<li>原生的并发编程</li>
-<li>完善的构建工具</li>
-<li>多编程范式。（支持函数式编程、面向对象编程）</li>
-<li>代码风格强制统一 （go format）</li>
-<li>高效的编程和运行</li>
-<li>丰富的标准库</li>
-</ul>
-<h4 id="函数标识符"><a href="#函数标识符" class="headerlink" title="函数标识符"></a>函数标识符</h4><p>​    go函数标识符首字母的大小写控制着对应程序实体的访问权限。如果标识符的首字符是大写，那么它所对应的程序实体就可以被本代码包之外的代码访问到，也称为可导出的或公开的。否则，对应的程序实体就只能被本包内的代码访问到，也称为不可导出的或包私有的。</p>
-<h4 id="Go标准命令"><a href="#Go标准命令" class="headerlink" title="Go标准命令"></a>Go标准命令</h4><ul>
-<li>build: 用于编译指定的代码或者GO语言源码文件。命令源码文件会被编译成可执行文件(windows对应exe文件， linux对应sh文件)，并存放到命令执行的目录或者指定目录下。而库源码文件被编译后，则不会在非临时目录中留下任何文件。</li>
-<li>clean： 用于清除因执行其他go命令而遗留下来的临时目录和文件。</li>
-<li>doc： 用于显示go语言代码包以及程序实体的文档</li>
-<li>env： 用于打印GO语言相关的环境信息</li>
-<li>fix： 用于修正指定代码包的源码文件中包含的过时语法或者代码调用。这使得我们在升级go语言版本时，可以非常方便同步升级程序。</li>
-<li>fmt： 用于格式化指定代码包中的GO源码文件。实际上，它是通过gofmt命令来实现功能的。</li>
-<li>generate： 用于识别指定代码包中源码文件中的go:generate注释，并执行其携带的任意命令。该命令独立于go语言标准的编译和安装体系。</li>
-<li>get： 下载、编译并安装指定的代码及其依赖包。</li>
-<li>install： 用于编译并安装指定的代码包及其依赖包。安装命令源码文件之后，代码所在的工作区目录的bin子目录，或者当前环境变量GOBIN指向的目录会生成所对应的可执行文件。</li>
-<li>list： 用于显示指定代码包中的信息</li>
-<li>run： 用于编译并运行指定的命令源码文件。当不想生成可执行文件而直接运行命令源码文件时，就需要使用它。</li>
-<li>tool：用于运行GO语言的特殊工具</li>
-</ul>
-<ul>
-<li><p>vet： 用于检查指定代码包的GO语言源码，并报告发现可疑代码问题。</p>
-</li>
-<li><p>version： GO语言版本以及环境信息。</p>
-</li>
-</ul>
-<h4 id="Go语言中，new-和make-的区别？"><a href="#Go语言中，new-和make-的区别？" class="headerlink" title="Go语言中，new()和make()的区别？"></a>Go语言中，new()和make()的区别？</h4><p>​    new是内建函数，定义如下：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">new</span><span class="params">(Type)</span> *<span class="title">Type</span></span></span><br></pre></td></tr></table></figure>
-
-<p>官方文档对于其描述是：内建函数new用来分配内存，它的第一个参数是一个类型，不是一个值，它的<strong>返回值是一个指向新的分配类型零值的指针</strong>。</p>
-<p>make也是内建函数，官方对它的描述是：内建函数make用来为slice，map和chan类型分配内存和初始化一个对象，跟new类似，第一个参数也是一个类型而不是一个值，跟new不同的是，<strong>make返回类型的引用而不是指针</strong>，返回值也依赖于具体传入的类型。</p>
-<p>总结：new的作用就是初始化一个指向类型的指针，make的作用为slice，map或chan初始化并返回引用T。</p>
-<p>Go语言中的引用类型有：映射（Map）、数组切片(slice)、通道（channel）,方法和函数。</p>
-<p>在<strong>使用指针之后，本来是值传递的整数类型在函数或者方法中修改会影响到原变量的值</strong>。</p>
-<h4 id="Go中的值传递"><a href="#Go中的值传递" class="headerlink" title="Go中的值传递"></a>Go中的值传递</h4><p>​    Go语言中所有的传参都是值传递(传递值)，都是一个副本，一个拷贝。因为拷贝的内容有时候是非引用类型(int ,string, struct这些)，这样就在函数中无法修改原内容数据；有的是引用类型（指针、map、slice、chan等），这样就可以修改原内容数据。</p>
-<h4 id="defer"><a href="#defer" class="headerlink" title="defer"></a>defer</h4><p>​    Go语言的defer语句会将后面跟随的语句进行延迟处理。在defer归属的函数即将返回时，将延迟处理的语句按照defer的逆序来进行执行。也就是说，先被defer的语句最后被执行，最后被defer的语句，最先被执行。</p>
-<h4 id="Go语言处理运行时错误"><a href="#Go语言处理运行时错误" class="headerlink" title="Go语言处理运行时错误"></a>Go语言处理运行时错误</h4><p>​    Go语言的错误处理思想及其设计包含一下特征：</p>
-<ul>
-<li>一个可能造成错误的函数，需要返回值中返回一个错误接口。如果调用时成功的，错误接口将返回nil，否则将返回错误。</li>
-<li>在函数调用后需要检查错误，如果发生错误，进行必要的错误处理。</li>
-</ul>
-<p>Go语言没有类似于Java的异常处理机制，虽然可以使用defer、panic、recover来模拟，但是官方并不主张这么做。</p>
-<h4 id="Go语言中的空接口"><a href="#Go语言中的空接口" class="headerlink" title="Go语言中的空接口"></a>Go语言中的空接口</h4><p>​    空接口是接口类型的特殊形式，空接口没有任何方法，因此任何类型都无需实现空接口。从实现的角度来看，任何值都满足这个接口的需求。因此空接口类型可以保存任何值，也可以从空接口中取出值。</p>
-<p>​    空接口类型类似于C#或者Java中的object。</p>
-<p>​    空接口的内部实现保存了对象的类型和指针。使用空接口保存一个数据的过程会比直接调用数据对应类型的变量稍慢。因此在开发中，应在需要中使用空接口，而不是在所有地方使用空接口。</p>
-<h4 id="Go并发"><a href="#Go并发" class="headerlink" title="Go并发"></a>Go并发</h4><p>​    Go语言通过编译器运行时(runtime)，从语言上支持了并发的特性。Go语言的并发通过goroutine特性完成。goroutine类似于线程，但是可以根据需要创建多个和goroutine并发工作。goroutine是由Go语言的运行时调度完成，而线程是由操作系统调度完成。</p>
-<p>​    Go语言还通过提供channel在多个goroutine之间进行通信。goroutine和channel是go语言秉承的CSP(Communicating Sequential Process)并发模式的重要实现基础。</p>
-<p>​    goroutine的概念类似于线程，但是goroutine是由Go程序运行时的调度和管理。Go程序会智能地将goroutine中的任务合理地分配给每个CPU。</p>
-<p>​    Go语言从main包的main函数开始，在程序启动时，Go程序会为main函数创建一个默认的goroutine。</p>
-<p>​    <strong>Go语言中使用go关键字为函数创建一个goroutine。一个函数可以创建多个goroutine，一个goroutine未必对应一个函数</strong>。</p>
-<p>​    在Go程序运行时(runtime)实现了一个小型的任务管理器。这套调度器的工作原理类似于操作系统调度线程，Go程序调度器可以高效地将CPU资源分配给每一个任务。传统逻辑中，开发者需要维护线程池中与CPU核心数量的对应关系。同样地，Go也可以通过runtime.GOMAXPROCS()函数做到。`</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">runtime.GOMAXPROCS(runtime.NumCPU())</span><br></pre></td></tr></table></figure>
-
-<p>​    单纯将函数并发执行是没有意义的。函数与函数之间需要交换数据才能体现并发执行的意义。虽然可以使用共享内存进行数据交换，但是在共享内存在不同的goroutine之间容易产生竟态问题。为了保证数据交换的正确性，必须使用互斥量对内存进行加锁，这种做法势必造成性能问题。</p>
-<p>​    Go语言中的通道(channel)是一种特殊的类型。在任何时候，同时只能有一个goroutine访问通道进行发送和获取数据。goroutine间通过通道就可以进行通信。通道就像一个传送带或队列，总是遵循先进先出的规则，保证收发数据的正确性。</p>
-<h4 id="Go等待組-waitgroup"><a href="#Go等待組-waitgroup" class="headerlink" title="Go等待組(waitgroup)"></a>Go等待組(waitgroup)</h4><p>​    除了可以使用通道(channel)和互斥锁进行两个并发程序之间的同步之外，还可以使用等待组(waitgroup)进行多个任务的同步，类似于java的CyclicBarrier。等待组可以保证在并发环境中完成指定数量的任务。</p>
-<p>​    </p>
-<h4 id="Go的跨平台"><a href="#Go的跨平台" class="headerlink" title="Go的跨平台"></a>Go的跨平台</h4><p>​    go并没有真正意义上的实现跨平台。go程序先被编译成机器码，这个机器码是针对特定的平台来生成的机器码，不同的平台要重新编译，编译出来的程序能够直接运行（类似于C/C++，但C/C++需要自己管理内存）。与java不同，java程序需要jvm本地才能运行，但是java对于所有的平台都只需要编译一次，jvm底层完成了平台的相应处理（不同平台有着不同的jvm）。</p>
-<h5 id="Go切片"><a href="#Go切片" class="headerlink" title="Go切片"></a>Go切片</h5><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sli := <span class="built_in">make</span>([]<span class="keyword">type</span>, <span class="built_in">len</span>, <span class="built_in">cap</span>)</span><br></pre></td></tr></table></figure>
-
-<p>​        第一个参数：数组类型</p>
-<p>​        第二个参数：数组长度</p>
-<p>​        第三个参数：数组容量</p>
-<h4 id="Go管道-channel"><a href="#Go管道-channel" class="headerlink" title="Go管道(channel)"></a>Go管道(channel)</h4><p>​    当一个资源需要在goroutine之间共享时，通道在goroutine之间架起了一个管道，并提供了确保同步交换数据的机制。</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个无缓冲通道</span></span><br><span class="line">unBufferedChannel := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">string</span>)</span><br><span class="line"><span class="comment">//创建一个缓冲通道</span></span><br><span class="line">bufferedChannel := <span class="built_in">make</span>(<span class="keyword">chan</span> <span class="keyword">string</span> , <span class="number">10</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">//向通道发送字符串</span></span><br><span class="line">unBufferedChannel &lt;- <span class="string">"Hello World"</span></span><br><span class="line"><span class="comment">//向通道中取出数据</span></span><br><span class="line">value := &lt;- unBufferedChannel</span><br></pre></td></tr></table></figure>
-
-<h5 id="无缓冲管道"><a href="#无缓冲管道" class="headerlink" title="无缓冲管道"></a>无缓冲管道</h5><p>​        无缓冲通道(unbuffered channel)是指在接收前没有能力保存任何值的通道。这种类型的通道要求发送goroutine和接收goroutine同时准备好，才能完成发送和接收操作。如果两个goroutine没有同时准备好，通道就会导致执行发送或接收操作的goroutine阻塞等待。这种对通道进行发送和接收的交互行为本身就是同步的。</p>
-<p>​    </p>
-<h5 id="有缓冲管道"><a href="#有缓冲管道" class="headerlink" title="有缓冲管道"></a>有缓冲管道</h5><p>​        有缓冲管道是一种在被接收前能存储一个或者多个值的通道。这种类型的通道并不强制要求goroutine之间必须同时完成接收和发送。通道会阻塞发送和接收动作的条件也会不同。只有在通道中没有要接收的值时，才会阻塞。只有在通道没有可用缓冲区容纳被发送的值时，发送动作才会阻塞。</p>
-<h3 id="Go的并发机制"><a href="#Go的并发机制" class="headerlink" title="Go的并发机制"></a>Go的并发机制</h3><p>​    <strong>go并发宗旨：不要用共享内存的方式来进行通信。作为替代，应该以通信作为手段来共享内存</strong>。</p>
-<p>go不推荐用共享内存的方式来传递数据，而推荐使用channel。channel用来在多个goroutine之间传递数据，并且还会保证整个过程的并发安全性。</p>
-
       
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/08/24/操作系统/" class="archive-article-date">
+  	<time datetime="2019-08-24T14:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
+</a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/08/24/操作系统/">操作系统学习 笔记</a>
+    </h1>
+  
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/24/Go/" alt="微信分享二维码">
-    </div>
-</div>
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">操作系统</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/08/24/docker学习/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/08/24/css：app/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -397,9 +226,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -465,6 +294,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">计算机系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
