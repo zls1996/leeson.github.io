@@ -156,34 +156,43 @@
           <div id="js-content" class="content-ll">
             
   
-  
+    <article id="post-JavaScript" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/01/JavaScript/" class="archive-article-date">
-  	<time datetime="2019-09-01T12:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/01/JavaScript/">深入理解计算机系统学习笔记</a>
+      <a class="article-title" href="/2019/09/01/JavaScript/">深入理解计算机系统学习笔记</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/09/01/JavaScript/" class="archive-article-date">
+  	<time datetime="2019-09-01T12:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><h4 id="Undefined类型"><a href="#Undefined类型" class="headerlink" title="Undefined类型"></a>Undefined类型</h4><p>一个已经被定义但是未被赋值的变量，js会为其默认设置为undefined值。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在给已定义变量message和未定义变量info显示类型时，都会显示undefined类型。</span></span><br><span class="line"><span class="keyword">var</span> message;</span><br><span class="line"><span class="comment">// var info;   //info未定义</span></span><br><span class="line">alert(<span class="keyword">typeof</span> message); <span class="comment">//undefined</span></span><br><span class="line">alert(type <span class="keyword">of</span> info); <span class="comment">//undefined</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Null类型"><a href="#Null类型" class="headerlink" title="Null类型"></a>Null类型</h4><p>Null类型是第二个只有一个值的数据类型，这个特殊的值是null。null值表示一个空对象指针，因此，null的数据类型是Object。实际上，undefined是衍生于null的，ECMA规定这两个值的相等值测试要为真，因此null值与undefined相等， ==返回true；但是===是比较数值和类型的，undefined和null类型不一致，所以===返回false</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="literal">null</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> obj); <span class="comment">// Object</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">undefined</span>); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> === <span class="literal">undefined</span>); <span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span>; <span class="comment">// "undefined"</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>; <span class="comment">// "Object"</span></span><br></pre></td></tr></table></figure>
+
+<p>​</p>
+        
+          <a class="article-more-a" href="/2019/09/01/JavaScript/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -195,33 +204,72 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/01/JavaScript/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/01/JavaScript面向对象/" class="archive-article-date">
-  	<time datetime="2019-09-01T12:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-JavaScript面向对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/01/JavaScript面向对象/">深入理解计算机系统学习笔记</a>
+      <a class="article-title" href="/2019/09/01/JavaScript面向对象/">深入理解计算机系统学习笔记</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/09/01/JavaScript面向对象/" class="archive-article-date">
+  	<time datetime="2019-09-01T12:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="ECMA创建对象设计模式"><a href="#ECMA创建对象设计模式" class="headerlink" title="ECMA创建对象设计模式"></a>ECMA创建对象设计模式</h3><h4 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h4><p>工厂模式是软件工程领域一种广为人知的设计模式，这种模式抽象了具体对象的过程。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params">name, age, job</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">    o.name = name;</span><br><span class="line">    o.age = age;</span><br><span class="line">    o.job = job;</span><br><span class="line">    o.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> o;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person1 = createPerson(<span class="string">"zls"</span>, <span class="number">23</span>, <span class="string">"码农"</span>);</span><br><span class="line"><span class="keyword">var</span> person2 = createPerson(<span class="string">"cxf"</span>, <span class="number">23</span>, <span class="string">"翻译"</span>);</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/09/01/JavaScript面向对象/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -233,98 +281,188 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/01/JavaScript面向对象/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
+    <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/25/test/" class="archive-article-date">
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/25/test/">test</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/25/test/" class="archive-article-date">
   	<time datetime="2019-08-25T10:15:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-25</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/25/test/">test</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/25/test/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/docker学习/" class="archive-article-date">
-  	<time datetime="2019-08-24T14:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/24/docker学习/">深入理解计算机系统学习笔记</a>
-    </h1>
-  
+    <article id="post-面试高频考点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1、数据库"><a href="#1、数据库" class="headerlink" title="1、数据库"></a>1、数据库</h2><p>Mysql数据库的索引（b、b+、hash索引、聚簇索引），数据库事务ACID、事务读的几种状态、索引失效问题、</p>
+<p>乐观锁(MVCC)和悲观锁        数据库隔离级别       MyISAM和InnoDB区别          聚簇索引     数据库垂直、水平切分</p>
+<p>数据库范式</p>
+        
+          <a class="article-more-a" href="/2019/08/24/面试高频考点/#more">more >></a>
+        
+      
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 
-          
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/24/面试高频考点/">展开全文 >></a>
+        </p>
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/css：app/" class="archive-article-date">
-  	<time datetime="2019-08-24T14:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-css：app" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/24/css：app/">深入理解计算机系统学习笔记</a>
+      <a class="article-title" href="/2019/08/24/css：app/">深入理解计算机系统学习笔记</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/08/24/css：app/" class="archive-article-date">
+  	<time datetime="2019-08-24T14:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="计算机系统"><a href="#计算机系统" class="headerlink" title="计算机系统"></a>计算机系统</h2><p>​    </p>
+<h4 id="从hello-c到hello-exe-hello-sh的编译过程"><a href="#从hello-c到hello-exe-hello-sh的编译过程" class="headerlink" title="从hello.c到hello.exe/hello.sh的编译过程"></a>从hello.c到hello.exe/hello.sh的编译过程</h4><p>​        为了能够在系统上运行hello.c程序，每条c语句都必须被其他程序转换成一系列的低级机器语言指令。然后这种机器指令按照一种特定的格式打好包，就形成了可执行目标程序，可执行目标程序以二进制磁盘文件的形式存放起来。</p>
+<p>​    计算机执行机器代码，用字节序列编码低级的操作，包括处理数据、管理内存、读写存取设备上的数据，以及利用网络通信，编译器基于编程语言的规则、目标机器的指令集和操作系统遵循的惯例，经过一系列的阶段生成机器代码。 GCC C语言编译器以汇编代码的形式产生输出，汇编代码是机器代码的文本表示，给出程序中的每一条指令。然后GCC调用汇编器和链接器，根据汇编代码生成可执行的机器代码。</p>
+<p>​        机器执行的程序就是字节序列，它是一系列指令的编码，机器对于产生这些指令的源代码一无所知。</p>
+        
+          <a class="article-more-a" href="/2019/08/24/css：app/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -336,33 +474,157 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/24/css：app/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/Spring-Aop源码学习/" class="archive-article-date">
-  	<time datetime="2019-08-24T14:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-docker学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/24/Spring-Aop源码学习/">Spring Aop源码学习</a>
+      <a class="article-title" href="/2019/08/24/docker学习/">深入理解计算机系统学习笔记</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/08/24/docker学习/" class="archive-article-date">
+  	<time datetime="2019-08-24T14:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Docker学习"><a href="#Docker学习" class="headerlink" title="Docker学习"></a>Docker学习</h1><h4 id="docker常用命令"><a href="#docker常用命令" class="headerlink" title="docker常用命令"></a>docker常用命令</h4><p>​    docker pull : 获取image</p>
+<p>​    docker build : 创建image -t:image的标签</p>
+<p>​    docker images：列出images</p>
+<p>​    docker run： 运行container</p>
+<p>​    docker ps: 列出运行的container</p>
+<p>​    docker rm:删除container</p>
+<p>​    docker rmi: 删除image</p>
+<p>​    docker cp : 在host和container之间拷贝文件</p>
+<p>​    docker commit : 保存改动为新的image</p>
+        
+          <a class="article-more-a" href="/2019/08/24/docker学习/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Docker</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/24/docker学习/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Spring-Aop源码学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/24/Spring-Aop源码学习/">Spring Aop源码学习</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/24/Spring-Aop源码学习/" class="archive-article-date">
+  	<time datetime="2019-08-24T14:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h3><p>​    AOP是Aspect-Oriented Programming（面向方面编程）。Aspect是一种新的模块化机制，用来描述分散在对象、类或者函数之间的横切关注点。从关注点中分离出横切关注点是面向切面的程序设计的核心概念。分离关注点使解决特定领域问题的代码从业务逻辑中独立出来，业务逻辑的代码中不再含有针对特定领域的调用。这样原本分散在整个应用中的变动就可以很好地管理起来。</p>
+<p>​    使用AOP，不仅可以将这些重复的代码抽取出来单独维护，在需要使用时统一调用，还可以为如何使用这些公共代码提供丰富灵活的手段。</p>
+<p>​</p>
+        
+          <a class="article-more-a" href="/2019/08/24/Spring-Aop源码学习/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -374,71 +636,77 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/24/Spring-Aop源码学习/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/面试高频考点/" class="archive-article-date">
-  	<time datetime="2019-08-24T14:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-分布式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/24/面试高频考点/">面试常见问题总结</a>
+      <a class="article-title" href="/2019/08/24/分布式/">分布式系统学习笔记</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/分布式/" class="archive-article-date">
+        
+        <a href="/2019/08/24/分布式/" class="archive-article-date">
   	<time datetime="2019-08-24T14:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/24/分布式/">分布式系统学习笔记</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>分布式系统是由多个节点通过网络连接在一起并通过消息的传递来进行协调的系统。</p>
+<h4 id="分布式系统的难点"><a href="#分布式系统的难点" class="headerlink" title="分布式系统的难点"></a>分布式系统的难点</h4><ol>
+<li><strong>缺乏全局时钟</strong>：每个节点都有自己的时钟，通过相互发送消息进行协调时，如果仍然依赖时序，会相对比较难处理。</li>
+<li><strong>面对故障独立性</strong>。</li>
+<li><strong>单点故障</strong></li>
+<li><strong>事务的挑战</strong></li>
+</ol>
+        
+          <a class="article-more-a" href="/2019/08/24/分布式/#more">more >></a>
+        
+      
 
-        <div class="article-info info-on-right">
-          
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -450,33 +718,83 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/24/分布式/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/Go/" class="archive-article-date">
-  	<time datetime="2019-08-24T14:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Go" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/24/Go/">深入理解计算机系统学习笔记</a>
+      <a class="article-title" href="/2019/08/24/Go/">深入理解计算机系统学习笔记</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/08/24/Go/" class="archive-article-date">
+  	<time datetime="2019-08-24T14:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Go语言特性"><a href="#Go语言特性" class="headerlink" title="Go语言特性"></a>Go语言特性</h4><ul>
+<li>开源</li>
+<li>静态类型和编译型语言</li>
+<li>跨平台</li>
+<li>自动垃圾回收</li>
+<li>原生的并发编程</li>
+<li>完善的构建工具</li>
+<li>多编程范式。（支持函数式编程、面向对象编程）</li>
+<li>代码风格强制统一 （go format）</li>
+<li>高效的编程和运行</li>
+<li>丰富的标准库</li>
+</ul>
+<h4 id="函数标识符"><a href="#函数标识符" class="headerlink" title="函数标识符"></a>函数标识符</h4><p>​    go函数标识符首字母的大小写控制着对应程序实体的访问权限。如果标识符的首字符是大写，那么它所对应的程序实体就可以被本代码包之外的代码访问到，也称为可导出的或公开的。否则，对应的程序实体就只能被本包内的代码访问到，也称为不可导出的或包私有的。</p>
+        
+          <a class="article-more-a" href="/2019/08/24/Go/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -488,33 +806,81 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/24/Go/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/24/操作系统/" class="archive-article-date">
-  	<time datetime="2019-08-24T14:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-操作系统" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/24/操作系统/">操作系统学习 笔记</a>
+      <a class="article-title" href="/2019/08/24/操作系统/">操作系统学习 笔记</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/08/24/操作系统/" class="archive-article-date">
+  	<time datetime="2019-08-24T14:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h3 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h3><p>​    计算机分层存储器体系(memory hierarchy)：计算机有若干兆快速、昂贵的高速缓存(cache)、数千兆（G）速度与价格适中的同样易失性的内存、以及几TB的低速、廉价、非易失性的磁盘存储。</p>
+<p>​    最底层的高速缓存由硬件来直接管理。</p>
+<h5 id="无存储器抽象的缺点"><a href="#无存储器抽象的缺点" class="headerlink" title="无存储器抽象的缺点"></a>无存储器抽象的缺点</h5><p>​    最简单的存储器抽象就是没有抽象。每个程序直接访问物理内存，指令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MOV REGISTER1, 1000</span><br></pre></td></tr></table></figure>
+
+<p>​    计算机会直接将位置1000的物理内存上的内容直接移到REGISTER1上。呈现给编程人员的存储器模型就是简单的物理内存。在这种情况下，<strong>想要在内存中同时运行两个程序是不可能的</strong>。 </p>
+<h5 id="存储器抽象：-地址空间"><a href="#存储器抽象：-地址空间" class="headerlink" title="存储器抽象： 地址空间"></a>存储器抽象： 地址空间</h5><p>​    想要使得多个应用程序同时处于内存中不受影响，需要解决两个问题：<strong>保护和重定向</strong>。地址空间就像进程中创建了一类抽象的CPU用以运行程序一样，地址空间为程序创造了一种抽象的内存。地址空间是一个进程用于寻址内存的一套地址集合。每个进程都有自己的地址空间，并且这个地址空间独立于其他的地址空间。</p>
+<p>​    比较难的是给每个程序一个自己独有的地址空间，使得一个程序中的地址28与另一个程序中的地址28物理地址不同。所解决的办法就是采用<strong>动态重定位</strong>。动态重定位就是把每个程序的地址空间映射到物理地址的不同部分。所实现的方法就是在每个CPU中配置了两个特殊硬件寄存器，通常叫做<strong>基址寄存器</strong>和<strong>界限寄存器</strong>。当一个程序运行时，程序的初始物理地址装载到基址寄存器中，程序的长度装载到界限寄存器中。</p>
+<p>​    每次一个进程访问内存，取一条指令，读或写一个数据字，CPU硬件会把地址发送到内存总线之前，自动把基址值加到进程发出的地址值上。如果访问的地址超过了界限，会产生错误并终止访问。</p>
+<p>​    使用基址寄存器和界限寄存器是给每个进程提供地址空间非常容易的方法，因为每个内存地址在送到内存之前，都会自动加上基址寄存器的内容。</p>
+<p>​    使用基址寄存器和界限寄存器重定向的缺点是：每次访问内存都需要进行加法和比较运算。</p>
+        
+          <a class="article-more-a" href="/2019/08/24/操作系统/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -526,19 +892,41 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/24/操作系统/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+  
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
     </nav>
@@ -639,11 +1027,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Spring-AOP</a>
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript;设计模式</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript;设计模式</a>
+                <a href="javascript:void(0)" class="js-tag color1">Spring-AOP</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -664,10 +1052,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
             
             <div class="clearfix"></div>
@@ -824,5 +1208,5 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
