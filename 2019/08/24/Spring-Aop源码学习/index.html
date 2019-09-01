@@ -5,20 +5,23 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Spring Aop源码学习 | Hexo</title>
+  <link rel="dns-prefetch" href="https://github.com/zls1996/zls1996.github.io">
+  <title>Spring Aop源码学习 | leeson的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="Spring-AOP">
+  <meta name="description" content="AOP​    AOP是Aspect-Oriented Programming（面向方面编程）。Aspect是一种新的模块化机制，用来描述分散在对象、类或者函数之间的横切关注点。从关注点中分离出横切关注点是面向切面的程序设计的核心概念。分离关注点使解决特定领域问题的代码从业务逻辑中独立出来，业务逻辑的代码中不再含有针对特定领域的调用。这样原本分散在整个应用中的变动就可以很好地管理起来。 ​">
+<meta name="keywords" content="Spring-AOP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring Aop源码学习">
-<meta property="og:url" content="http://yoursite.com/2019/08/24/Spring-Aop源码学习/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="https://github.com/zls1996/zls1996.github.io/2019/08/24/Spring-Aop源码学习/index.html">
+<meta property="og:site_name" content="leeson的个人博客">
+<meta property="og:description" content="AOP​    AOP是Aspect-Oriented Programming（面向方面编程）。Aspect是一种新的模块化机制，用来描述分散在对象、类或者函数之间的横切关注点。从关注点中分离出横切关注点是面向切面的程序设计的核心概念。分离关注点使解决特定领域问题的代码从业务逻辑中独立出来，业务逻辑的代码中不再含有针对特定领域的调用。这样原本分散在整个应用中的变动就可以很好地管理起来。 ​">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-25T05:51:53.536Z">
+<meta property="og:updated_time" content="2019-08-25T15:34:12.748Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring Aop源码学习">
+<meta name="twitter:description" content="AOP​    AOP是Aspect-Oriented Programming（面向方面编程）。Aspect是一种新的模块化机制，用来描述分散在对象、类或者函数之间的横切关注点。从关注点中分离出横切关注点是面向切面的程序设计的核心概念。分离关注点使解决特定领域问题的代码从业务逻辑中独立出来，业务逻辑的代码中不再含有针对特定领域的调用。这样原本分散在整个应用中的变动就可以很好地管理起来。 ​">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="leeson的个人博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -48,7 +51,7 @@
 			<img src="" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">leeson</a></h1>
 		</hgroup>
 		
 
@@ -106,7 +109,7 @@
 				<img src="" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">leeson</h1>
 			</hgroup>
 			
 			
@@ -172,7 +175,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h3><p>​    AOP是Aspect-Oriented Programming（面向方面编程）。Aspect是一种新的模块化机制，用来描述分散在对象、类或者函数之间的横切关注点。从关注点中分离出横切关注点是面向切面的程序设计的核心概念。分离关注点使解决特定领域问题的代码从业务逻辑中独立出来，业务逻辑的代码中不再含有针对特定领域的调用。这样原本分散在整个应用中的变动就可以很好地管理起来。</p>
+<p>​    使用AOP，不仅可以将这些重复的代码抽取出来单独维护，在需要使用时统一调用，还可以为如何使用这些公共代码提供丰富灵活的手段。</p>
+<p>​    <a id="more"></a> </p>
+<h3 id="Spring-AOP"><a href="#Spring-AOP" class="headerlink" title="Spring AOP"></a>Spring AOP</h3><p>​    在Spring AOP实现中，使用java语言来实现增强对象与切面增强应用，并为这两者的结合提供了配置环境。对于编织配置，可以使用IOC容器来完成。</p>
+<p>​    在Spring AOP中，使用的技术实际上是Java语言本身的特性，比如<strong>Java Proxy代理类、拦截器等技术，用于完成AOP编织的实现</strong>。</p>
+
       
 
       
@@ -262,7 +270,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/24/Spring-Aop源码学习/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/zls1996/zls1996.github.io/2019/08/24/Spring-Aop源码学习/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -276,9 +284,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2019/08/24/css：app/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          深入理解计算机系统学习笔记
+        
+      </div>
+    </a>
   
-    <a href="/2019/08/24/css：app/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">深入理解计算机系统学习笔记</div>
+  
+    <a href="/2019/08/24/面试高频考点/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">面试常见问题总结</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -321,7 +338,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 John Doe
+    		&copy; 2019 leeson
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -404,7 +421,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Spring-AOP</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript;设计模式</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -413,10 +442,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">分布式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Docker</a>
               </li>
              
               <li class="article-tag-list-item">

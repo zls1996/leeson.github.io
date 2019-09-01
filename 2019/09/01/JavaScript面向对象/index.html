@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://github.com/zls1996/zls1996.github.io">
   <title>深入理解计算机系统学习笔记 | leeson的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="计算机系统​     从hello.c到hello.exe/hello.sh的编译过程​        为了能够在系统上运行hello.c程序，每条c语句都必须被其他程序转换成一系列的低级机器语言指令。然后这种机器指令按照一种特定的格式打好包，就形成了可执行目标程序，可执行目标程序以二进制磁盘文件的形式存放起来。 ​    计算机执行机器代码，用字节序列编码低级的操作，包括处理数据、管理内存、读写">
-<meta name="keywords" content="计算机系统">
+  <meta name="description" content="ECMA创建对象设计模式工厂模式工厂模式是软件工程领域一种广为人知的设计模式，这种模式抽象了具体对象的过程。 12345678910111213function createPerson(name, age, job) &amp;#123;    var o = new Object();    o.name = name;    o.age = age;    o.job = job;    o.say">
+<meta name="keywords" content="JavaScript;设计模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深入理解计算机系统学习笔记">
-<meta property="og:url" content="https://github.com/zls1996/zls1996.github.io/2019/08/24/css：app/index.html">
+<meta property="og:url" content="https://github.com/zls1996/zls1996.github.io/2019/09/01/JavaScript面向对象/index.html">
 <meta property="og:site_name" content="leeson的个人博客">
-<meta property="og:description" content="计算机系统​     从hello.c到hello.exe/hello.sh的编译过程​        为了能够在系统上运行hello.c程序，每条c语句都必须被其他程序转换成一系列的低级机器语言指令。然后这种机器指令按照一种特定的格式打好包，就形成了可执行目标程序，可执行目标程序以二进制磁盘文件的形式存放起来。 ​    计算机执行机器代码，用字节序列编码低级的操作，包括处理数据、管理内存、读写">
+<meta property="og:description" content="ECMA创建对象设计模式工厂模式工厂模式是软件工程领域一种广为人知的设计模式，这种模式抽象了具体对象的过程。 12345678910111213function createPerson(name, age, job) &amp;#123;    var o = new Object();    o.name = name;    o.age = age;    o.job = job;    o.say">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-25T06:00:39.424Z">
+<meta property="og:updated_time" content="2019-09-01T13:44:31.569Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入理解计算机系统学习笔记">
-<meta name="twitter:description" content="计算机系统​     从hello.c到hello.exe/hello.sh的编译过程​        为了能够在系统上运行hello.c程序，每条c语句都必须被其他程序转换成一系列的低级机器语言指令。然后这种机器指令按照一种特定的格式打好包，就形成了可执行目标程序，可执行目标程序以二进制磁盘文件的形式存放起来。 ​    计算机执行机器代码，用字节序列编码低级的操作，包括处理数据、管理内存、读写">
+<meta name="twitter:description" content="ECMA创建对象设计模式工厂模式工厂模式是软件工程领域一种广为人知的设计模式，这种模式抽象了具体对象的过程。 12345678910111213function createPerson(name, age, job) &amp;#123;    var o = new Object();    o.name = name;    o.age = age;    o.job = job;    o.say">
   
     <link rel="alternative" href="/atom.xml" title="leeson的个人博客" type="application/atom+xml">
   
@@ -155,7 +155,7 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-css：app" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-JavaScript面向对象" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -167,47 +167,46 @@
   
 
         
-        <a href="/2019/08/24/css：app/" class="archive-article-date">
-  	<time datetime="2019-08-24T14:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
+        <a href="/2019/09/01/JavaScript面向对象/" class="archive-article-date">
+  	<time datetime="2019-09-01T12:56:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="计算机系统"><a href="#计算机系统" class="headerlink" title="计算机系统"></a>计算机系统</h2><p>​    </p>
-<h4 id="从hello-c到hello-exe-hello-sh的编译过程"><a href="#从hello-c到hello-exe-hello-sh的编译过程" class="headerlink" title="从hello.c到hello.exe/hello.sh的编译过程"></a>从hello.c到hello.exe/hello.sh的编译过程</h4><p>​        为了能够在系统上运行hello.c程序，每条c语句都必须被其他程序转换成一系列的低级机器语言指令。然后这种机器指令按照一种特定的格式打好包，就形成了可执行目标程序，可执行目标程序以二进制磁盘文件的形式存放起来。</p>
-<p>​    计算机执行机器代码，用字节序列编码低级的操作，包括处理数据、管理内存、读写存取设备上的数据，以及利用网络通信，编译器基于编程语言的规则、目标机器的指令集和操作系统遵循的惯例，经过一系列的阶段生成机器代码。 GCC C语言编译器以汇编代码的形式产生输出，汇编代码是机器代码的文本表示，给出程序中的每一条指令。然后GCC调用汇编器和链接器，根据汇编代码生成可执行的机器代码。</p>
-<p>​        机器执行的程序就是字节序列，它是一系列指令的编码，机器对于产生这些指令的源代码一无所知。</p>
-<a id="more"></a> 
+        <h3 id="ECMA创建对象设计模式"><a href="#ECMA创建对象设计模式" class="headerlink" title="ECMA创建对象设计模式"></a>ECMA创建对象设计模式</h3><h4 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h4><p>工厂模式是软件工程领域一种广为人知的设计模式，这种模式抽象了具体对象的过程。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params">name, age, job</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">    o.name = name;</span><br><span class="line">    o.age = age;</span><br><span class="line">    o.job = job;</span><br><span class="line">    o.sayName = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> o;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person1 = createPerson(<span class="string">"zls"</span>, <span class="number">23</span>, <span class="string">"码农"</span>);</span><br><span class="line"><span class="keyword">var</span> person2 = createPerson(<span class="string">"cxf"</span>, <span class="number">23</span>, <span class="string">"翻译"</span>);</span><br></pre></td></tr></table></figure>
 
+<a id="more"></a>
 
+<h4 id="构造函数模式"><a href="#构造函数模式" class="headerlink" title="构造函数模式"></a>构造函数模式</h4><p>ECMA中的构造函数可用来创建特定类型的对象。像Object和Array这样的原生构造函数，在运行时会自动出现在执行环境中。此外，还可以创建自定义的构造函数，从而定义对象类型的属性和方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age, job</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">    <span class="keyword">this</span>.job = job;</span><br><span class="line">    <span class="keyword">this</span>.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person(<span class="string">"zls"</span>, <span class="number">23</span>, <span class="string">"码农"</span>);</span><br><span class="line"><span class="keyword">var</span> person2 = <span class="keyword">new</span> Person(<span class="string">"cxf"</span>, <span class="number">23</span>, <span class="string">"翻译"</span>);</span><br></pre></td></tr></table></figure>
 
-<h4 id="编译系统"><a href="#编译系统" class="headerlink" title="编译系统"></a>编译系统</h4><p>​    编译系统(Compilation system)由四步构成：预处理器、编译器、汇编器、链接器组成。</p>
-<h3 id="计算机系统硬件组成"><a href="#计算机系统硬件组成" class="headerlink" title="计算机系统硬件组成"></a>计算机系统硬件组成</h3><ol>
-<li><p><strong>总线</strong></p>
-<p>​    贯穿整个系统的是一组电子管道，称为总线。总线携带信息字节并负责在各个组件之间传递。通常总线被设计成传递固定长的字节块，也就是字(word)。字中的字节数（即字长）是一个基本的系统参数，各个系统中都不尽相同。现在的大多数机器字长要么是4个字节(32为系统)，要么是8个字节（64位）。</p>
-</li>
-<li><p><strong>I/O</strong>设备</p>
-<p>I/O设备是系统与外部世界的联系通道。每个i/o设备都通过一个控制器或者适配器与I/O总线相连。控制器和适配器之间的区别主要在于它们的封装方式。控制器是I/O设备本身或者系统的主印制电路板上的芯片组。而适配器则是一块插在主板插槽上的卡。无论如何，它们的功能都是在I/O总线和I/O设备之间传递信息。</p>
-</li>
-<li><p><strong>主存</strong></p>
-<p>主存是一个临时存储设备，在处理器执行程序时，用来存放程序和程序运行时刻数据。</p>
-</li>
-<li><p><strong>CPU</strong></p>
-<p>处理器，解释或执行存储在主存中指令的引擎。处理器的核心是一个大小为一个字的存储设备（或寄存器），称为程序计数器（PC）。在任何时刻，PC都指向主存中的某条机器语言指令。</p>
-<p>从系统通电开始，直到系统断电，处理器一直在不断地执行程序计数器指向的指令，再更新程序计数器，使其指向下一条指令。</p>
-</li>
+<p>上述代码中，没有显示地创建对象，而是直接将属性和方法赋给了this对象，没有return语句。</p>
+<p>​    创建Person新实例，必须使用new操作符。这种方式调用构造函数实际上会经历以下四个步骤：</p>
+<ol>
+<li>构造一个新对象</li>
+<li>将构造函数的作用域赋给这个新对象(因此this就指向了这个新对象)</li>
+<li>执行构造函数中的代码(为这个新对象添加属性)</li>
+<li>返回新对象</li>
 </ol>
-<h4 id="高速缓存"><a href="#高速缓存" class="headerlink" title="高速缓存"></a>高速缓存</h4><p>​        程序和程序数据最初是被存放在磁盘上 。当程序被加载时，它们复制到主存，当处理器运行程序时，指令又从主存复制到处理器。从程序员的角度来看，复制就是开销，减慢了程序“真正的工作”。因此，系统设计者得一个主要目标就是使这些复制操作尽可能快的执行。</p>
-<p>​        根据机械原理，较大的存储设备要比较小的存储设备运行的慢，而快速设备的造价远高于同类的低速设备。类似地，一个典型的寄存器文件只存储几百字节的信息。而主存中可存放十几亿个字节。但是，处理器从寄存器中读取数据比从主存中读取要快100倍。</p>
-<p>​        针对这种处理器与主存之间速度的差异，系统设计者采用了更小更快的存储设备，称为高速缓存寄存器(cache memory)，作为暂存的集结领域，存放处理器近期可能会需要的信息。</p>
-<h3 id="信息存储"><a href="#信息存储" class="headerlink" title="信息存储"></a>信息存储</h3><p>​        大多数计算机都采用8位的块，或者称为字节，作为最小的可寻址的内存单位，而不是访问内存中单独的位。机器级程序将内存视为非常大的字节数组，称为虚拟内存(virtual memory)。内存的每个字节都用一个唯一的数字来标识，称为它的地址，所有可能地址的空间的集合就称为虚拟地址空间。</p>
-<p>​        当我们使用高级语言编程时(C、C++、Java)，机器屏蔽了程序的细节，即机器级的实现。与此相反，当用汇编代码编程的时候，程序员必须指定程序用来执行计算的低级指令。高级语言提供的抽象级别比较高，大多数时候，在这个级别上工作的效率比较高，也更可靠。编译器提供的类型检查能帮助我们发现许多程序错误，并能够保证一致的方式来引用和处理数据。通常情况下，使用现代的优化编译器产生的代码至少于一个熟练的汇编语言程序员手工代码一样有效。最大的优点是，用高级语言编写的程序可以在很多不同的机器上编译与运行。而汇编代码则是与特定机器密切相关的。</p>
-<p>​        对于严谨的程序员而言，能够阅读和理解汇编代码仍然是一项很重要的功能。通常将尝试源代码的各种形式，每次编译并检查产生的汇编代码，从而了解程序的运行情况。</p>
-<h3 id="处理器体系结构"><a href="#处理器体系结构" class="headerlink" title="处理器体系结构"></a>处理器体系结构</h3><p>​    处理器必须执行一系列指令，每条指令执行某个简单操作，例如两个数相加。指令被编码为由一个或多个字节序列组成的二进制格式。一个处理器所支持的指令和指令的字节级编码称为它的<strong>指令级体系结构</strong>(Instruction-Set Architectute, <strong>ISA</strong>)，不同的处理器，都有着不同的ISA。一个程序被编译成在一种机器上运行，就不能在另外一台机器上执行。</p>
-<p>​        ISA模型看起来应该是顺序指令执行，也就是先取出一条指令，等到它执行完毕，再开始下一条。然而，与一个时刻只执行一条指令相比，通过同时处理多条指令的不同部分，处理器可以获得更高的性能。为了保证处理器能够得到同顺序执行的结果，人们采用了一些特殊的机制。</p>
-<h3 id="存储器层次结构"><a href="#存储器层次结构" class="headerlink" title="存储器层次结构"></a>存储器层次结构</h3><p>​        CPU执行指令，而存储器系统为CPU存放指令和数据。存储器系统是一个具有不同容量、成本和访问时间的存储设备的层次结构。CPU寄存器保存着最常用的数据。靠近CPU的小的、快速的高速缓存存储器作为一部分存储在相对慢速的主存储器中数据和指令的缓冲区域。主存缓存在容量较大、慢速磁盘上的数据，而这些磁盘上常常又做为存储在通过网络连接的其他机器的磁盘或者磁带上的数据的缓冲区域。</p>
+<h4 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h4><p>​    ECMA创建的每个函数都有一个prototype(原型)属性，这个属性是一个指针，指向一个对，而这个对象的用途是包括有特定类型的所有实例共享的属性和方法。如果按照字面意思理解，那就是prototype就是通过调用构造函数而创建的那个对象实例的原型对象。使用原型对象的好处是可以让</p>
+<p>​    所有对象实例共享它所包含的属性和方法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype.name = <span class="string">"zls"</span>;</span><br><span class="line">Person.prototype.age = <span class="number">23</span>;</span><br><span class="line">Person.prototype.job = <span class="string">"码农"</span>;</span><br><span class="line">Person.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person();</span><br><span class="line">person1.sayName(); <span class="comment">// "zls"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person2 = <span class="keyword">new</span> Person();</span><br><span class="line">person2.sayName(); <span class="comment">// "zls"</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(person1.sayName === person2.sayName); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="构造函数模式和原型模式"><a href="#构造函数模式和原型模式" class="headerlink" title="构造函数模式和原型模式"></a>构造函数模式和原型模式</h4><p>​    创建自定义类型的最常见方式，就是使用构造函数和原型模式。构造函数模式用于付那个一实例类型，而原型模式用于定义方法和共享的属性。结果，每个实例都会有自己的一份实例属性的副本，但同时又共享着对方法的引用，最大限度节省了内存。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age, job</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.age = age;</span><br><span class="line">    <span class="keyword">this</span>.job = job;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">    sayName: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="keyword">constructor</span>: Person</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var person1 = new Person("zls", 23, "码农");</span><br><span class="line">var person2 = new Person("cxf", 23, "翻译");</span><br><span class="line"></span><br><span class="line">console.log(person1.sayName === person2.sayName);</span><br></pre></td></tr></table></figure>
+
+<p>上述例子中，实例属性都是在构造函数中定义的，而所有实例共享的属性constructor和方法则是在原型中定义的。</p>
+<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><p>​    由于ECMA函数没有签名，在ECMA中无法实现接口继承。ECMA只支持实现继承，而且继承主要是依靠<strong>原型链</strong>来实现的。</p>
+<h5 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h5><p>​    原型链的基本思想是利用原型让一个引用类型继承另一个引用类型的属性和方法。简单回顾一下构造函数、原型和实例的关系：每个构造函数都有一个原型对象，原型对象都包含一个指向构造函数的指针，而实例都包含一个指向原型对象的内部指针。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parents</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.property = <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Parents.prototype.getParentsProperty = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.property;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Child</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.value = <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Child.prototype.getValue = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.value;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//子类型的prototype指向父类型，就实现了原型链模式</span></span><br><span class="line">Child.prototype = <span class="keyword">new</span> Parents();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> instance = <span class="keyword">new</span> Child();</span><br><span class="line"><span class="built_in">console</span>.log(instance.getValue()); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(instance.getParentsProperty()); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>​    需要注意的是，所有引用类型都默认继承了Object，而这个继承也是通过原型链来实现的。所有函数的默认原型都是Object的实例，因此默认原型都会包含一个内部指针，指向Object。prototype。</p>
+<h4 id="借用构造函数"><a href="#借用构造函数" class="headerlink" title="借用构造函数"></a>借用构造函数</h4><p>​    在子类型构造函数的内部调用超类型的构造函数。由于函数只是在特定环境中执行代码的独对象，因此通过使用apply和call方法也可以在新创建的对象中执行构造函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parents</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Child</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//调用此函数，就Child就继承了Parents</span></span><br><span class="line">    Parents.call(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> instance1 = <span class="keyword">new</span> Child();</span><br><span class="line">instance1.colors.push(<span class="string">"black"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(instance1.colors); <span class="comment">// "red", "blue", "green", "black"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> instance2 = <span class="keyword">new</span> Child();</span><br><span class="line"><span class="built_in">console</span>.log(instance2.colors);<span class="comment">// "red", "blue", "green"</span></span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -242,7 +241,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">计算机系统</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript;设计模式</a>
         		</li>
       		
 		</ul>
@@ -298,7 +297,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/zls1996/zls1996.github.io/2019/08/24/css：app/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/zls1996/zls1996.github.io/2019/09/01/JavaScript面向对象/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -312,7 +311,7 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/08/24/docker学习/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/09/01/JavaScript/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -322,8 +321,8 @@
     </a>
   
   
-    <a href="/2019/08/24/Spring-Aop源码学习/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Spring Aop源码学习</div>
+    <a href="/2019/08/25/test/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">test</div>
       <i class="icon-circle-right"></i>
     </a>
   
